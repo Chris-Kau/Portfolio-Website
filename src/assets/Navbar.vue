@@ -21,20 +21,19 @@ const scrollTo = (id) => {
 </script>
 
 <template>
-<v-app-bar flat height="80px" color="background">
-  <v-container class="flex mx-auto bg-(--color-primary) rounded-lg" max-width="800px" color="primary">
-    <div class="flex w-100 mx-auto align-center text-white">
-      <v-app-bar-title>Chris Kau</v-app-bar-title>
-      <v-btn
-        v-for="item in navItems"
-        :key="item.id"
-        variant="text"
-        @click="scrollTo(item.id)"
-      >
-        {{ item.label }}
-      </v-btn>
-    </div>
-  </v-container>
-
+<v-app-bar elevation="3" height="85" color="primary">
+      <v-container class="sans flex align-center" max-width="1400">
+          <v-app-bar-title class="mono text-h5 font-weight-semibold text-(--color-secondary)">
+            Chris Kau
+          </v-app-bar-title>
+        <v-btn
+          v-for="item in navItems"
+          :key="item.id"
+          @click="scrollTo(item.id)"
+          class="font-weight-regular"
+        >
+          {{ item.label }}
+        </v-btn>
+      </v-container>
 </v-app-bar>
 </template>

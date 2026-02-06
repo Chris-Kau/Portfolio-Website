@@ -12,12 +12,12 @@ import "../src/assets/main.css"
 const oshawottTheme = {
     dark: false,
     colors:{
-        'primary': "#4C5273",
-        'secondary': "#84BFB9",
+        'secondary': "#4C5273",
+        'primary': "#7885A8",
         'ck-accent': "#F2E1AC",
         'ck-supportingaccent': "#A67232",
-        'ck-text': "#0D0D0D",
-        'background': "#F3F5F0",
+        'ck-text': "#233147",
+        'background': "#e8f1fa",
     },
 }
 const vuetify = createVuetify({
@@ -33,6 +33,14 @@ const vuetify = createVuetify({
     defaultSet: 'mdi',
     sets:{
       mdi,
+    }
+  },
+  defaults: {
+    global:{
+      style:{
+        fontFamily:
+        "'Roboto Mono', monospace",
+      }
     }
   }
 })
