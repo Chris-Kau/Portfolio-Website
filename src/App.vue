@@ -4,7 +4,30 @@
 <template>
   <v-app>
     <Navbar/>
+      <section id="about">
+
+      </section>
+
+      <section id="experience">
+
+      </section>
+
+      <section id="projects">
+        
+      </section>
+
+      <section id="skills">
+
+      </section>
+
+      <section id="contact">
+
+      </section>
   </v-app>
 </template>
 
-<style scoped></style>
+<style scoped>
+section {
+  scroll-margin-top: 80px;
+}
+</style>
