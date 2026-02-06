@@ -12,16 +12,21 @@ const oshawottTheme = {
     colors:{
         'primary': "#4C5273",
         'secondary': "#84BFB9",
-        'accent': "#F2E1AC",
-        'supportingaccent': "#A67232",
-        'text': "#0D0D0D",
+        'ck-accent': "#F2E1AC",
+        'ck-supportingaccent': "#A67232",
+        'ck-text': "#0D0D0D",
         'background': "#F3F5F0",
-    }
+    },
 }
 const vuetify = createVuetify({
   components,
   directives,
-  themes: {oshawottTheme},
+  theme: {
+    defaultTheme: 'oshawottTheme',
+    themes:{
+        oshawottTheme
+    }
+  },
 })
 
 createApp(App).use(vuetify).mount('#app')
