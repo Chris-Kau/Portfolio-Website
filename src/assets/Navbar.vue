@@ -23,7 +23,7 @@ const scrollTo = (id) => {
 </script>
 
 <template>
-<v-app-bar elevation="3" height="85" color="primary">
+<v-app-bar elevation="3" height="70" color="primary">
       <v-container class="sans flex align-center" max-width="1400">
           <v-app-bar-title class="mono text-h5 font-weight-semibold text-(--color-paragraph-text)">
             Chris Kau

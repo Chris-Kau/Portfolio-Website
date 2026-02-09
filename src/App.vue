@@ -60,7 +60,7 @@
 
         <section id="experience">
           <v-container class="py-16">
-            <p class="text-8xl font-semibold text-(--color-text) mb-10 text-center">Work Experience</p>
+            <p class="mono text-8xl font-semibold text-(--color-text) mb-10 text-center">Work Experience</p>
             <v-container class="d-flex flex-row align-center justify-center">
               <div class="image-wrapper">
                 <img
@@ -87,7 +87,14 @@
                       fill-dot
                       dot-color="ck-accent"
                     >
-                      <ExperienceCard :href="item.link" target="_blank" :company="item.company" :role="item.role" :date="item.date" :description="item.description"/>
+                      <ExperienceCard :href="item.link"
+                      target="_blank"
+                      :company="item.company"
+                      :role="item.role"
+                      :date="item.date"
+                      :description="item.description"
+                      :skills="item.skills"
+                      />
                     </v-timeline-item>
                 </v-timeline>
               </div>
@@ -102,6 +109,7 @@
 
         <section id="projects">
           <v-container class="py-16">
+            <p class="mono text-8xl font-semibold text-(--color-text) mb-10 text-center">Projects</p>
             <img src="./assets/images/about oshawott.png">
           </v-container>
         </section>
@@ -129,7 +137,7 @@
   </v-app>
 </template>
 
-<style global>
+<style scoped>
 section {
   scroll-margin-top: 0px;
 }
@@ -180,7 +188,7 @@ section {
 
 .scroll-container {
   height: calc(100vh - 85px);
-  margin-top: 85px;
+  margin-top: 70px;
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-width: thin;
