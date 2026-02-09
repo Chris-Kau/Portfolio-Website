@@ -9,6 +9,7 @@ import { mdi } from 'vuetify/iconsets/mdi'
 import '@mdi/font/css/materialdesignicons.css'
 import "../src/assets/main.css"
 
+
 const oshawottTheme = {
     dark: false,
     colors:{
@@ -16,10 +17,12 @@ const oshawottTheme = {
         'primary': "#7885A8",
         'ck-accent': "#F2E1AC",
         'ck-supportingaccent': "#A67232",
-        'ck-text': "#233147",
+        'ck-text': "#1F2937",
+        "ck-paragraph-text": "#1F2937",
         'background': "#e8f1fa",
     },
 }
+
 const vuetify = createVuetify({
   components,
   directives,

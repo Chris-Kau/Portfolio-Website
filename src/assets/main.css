@@ -3,16 +3,24 @@
 @import "tailwindcss/utilities.css" layer(utilities);
 :root{
     --color-secondary: #4C5273;
-    --color-primary: #7885A8;
+    --color-primary: #8d99bb;
     --color-accent: #F2E1AC;
     --color-supportingaccent: #A67232;
-    --color-text: #233147;
+    --color-text: #1F2937 ;
+    --color-paragraph-text: #1F2937;
     --color-background: #e8f1fa;
 }
+
+
 
 .sans{
 font-family: 'General Sans', sans-serif;
 }
 .mono{
 font-family: 'Roboto Mono', monospace;
+}
+
+html, body, #app {
+  height: 100%;
+  overflow: hidden; /* IMPORTANT: stop the page scrollbar */
 }

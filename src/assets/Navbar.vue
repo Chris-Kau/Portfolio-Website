@@ -8,8 +8,10 @@ const navItems = [
 ]
 
 const scrollTo = (id) => {
-  if (id === 'top') {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+  const container = document.querySelector('.scroll-container')
+  if (!container) return
+  if (id === 'about') {
+    container.scrollTo({ top: 0, behavior: 'smooth' })
     return
   }
 
@@ -23,7 +25,7 @@ const scrollTo = (id) => {
 <template>
 <v-app-bar elevation="3" height="85" color="primary">
       <v-container class="sans flex align-center" max-width="1400">
-          <v-app-bar-title class="mono text-h5 font-weight-semibold text-(--color-secondary)">
+          <v-app-bar-title class="mono text-h5 font-weight-semibold text-(--color-paragraph-text)">
             Chris Kau
           </v-app-bar-title>
         <v-btn
@@ -31,6 +33,7 @@ const scrollTo = (id) => {
           :key="item.id"
           @click="scrollTo(item.id)"
           class="font-weight-regular"
+          color="ck-accent"
         >
           {{ item.label }}
         </v-btn>
