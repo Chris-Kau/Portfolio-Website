@@ -1,5 +1,7 @@
 <script setup lang="ts">
   import Navbar from "./assets/Navbar.vue";
+  import ExperienceCard from "./assets/ExperienceCard.vue";
+  
 </script>
 <template>
   <v-app>
@@ -57,6 +59,9 @@
 
       <section id="experience">
         <v-container class="py-16">
+          <p class="text-8xl font-semibold text-(--color-text)">Work Experience</p>
+          <ExperienceCard title="G2 Software Systems" role="Software Engineer" date="2025-Present" description="yayyyy"/>
+
           <img src="./assets/images/about oshawott.png">
         </v-container>
       </section>
