@@ -66,11 +66,11 @@
                 <img
                   src="./assets/images/oshawott shadow.png"
                   class="shadow-overlay"
-                  style="margin-top: 100px; width:65%"
-                  alt="Oshawott illustration"
+                  style="right:80px; top:25px"
+                  alt="Oshawott Proud Illustration"
                   
                 />
-                <img src="./assets/images/work oshawott.png" width="80%" class="main-img">
+                <img src="./assets/images/work oshawott.png" style="width:500px" class="main-img" alt="Oshawott Proud Illustration">
 
               </div>
               <div class="flex-1">
