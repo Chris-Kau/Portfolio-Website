@@ -1,14 +1,14 @@
 <script setup>
-import Projects from './data/Projects.json'
-const project = Projects[0]
+defineProps(["project"])
 </script>
 
 <template>
- <v-card max-width="300" hover color="secondary" class="project-card">
+ <v-card width="300" max-width="300" max-height="300" height="300" hover color="secondary" class="project-card">
   <div class="flex text-4xl card-darken justify-center items-center mono font-weight-black">Learn More</div>
   <v-img
     :src="`./${project.image}`"
-    aspect-ratio="16/9"
+    height="300"
+    width="300"
     class="mono align-end text-white project-img"
   >
     <div class="img-gradient">
@@ -19,19 +19,6 @@ const project = Projects[0]
   </v-img>
 
   <v-card-item class="pa-0">
-    <v-container class="d-flex flex-row flex-wrap ga-2 bg-(--color-primary)">
-      <v-chip
-        class="sans skill-chip opacity-90"
-        v-for="skill in project.skills"
-        :key="skill"
-        color="ck-accent"
-        text-color="ck-supportingaccent"
-        variant="flat"
-        label
-      >
-        {{ skill }}
-      </v-chip>
-    </v-container>
   </v-card-item>
 </v-card>
 </template>
