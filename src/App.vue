@@ -2,6 +2,7 @@
   import Navbar from "./assets/Navbar.vue";
   import ExperienceCard from "./assets/ExperienceCard.vue";
   import WorkExperienceData from "@/assets/data/WorkExperiences.json";
+  import ProjectCard from "./assets/ProjectCard.vue";
 </script>
 <template>
   <v-app>
@@ -87,7 +88,8 @@
                       fill-dot
                       dot-color="ck-accent"
                     >
-                      <ExperienceCard :href="item.link"
+                      <ExperienceCard 
+                      :href="item.link"
                       target="_blank"
                       :company="item.company"
                       :role="item.role"
@@ -110,6 +112,7 @@
         <section id="projects">
           <v-container class="py-16">
             <p class="mono text-8xl font-semibold text-(--color-text) mb-10 text-center">Projects</p>
+            <ProjectCard/>
             <img src="./assets/images/about oshawott.png">
           </v-container>
         </section>
