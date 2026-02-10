@@ -1,0 +1,45 @@
+[
+    {
+        "name":"Stardew Valley: Item Locator Mod",
+        "description": "Allows users to search for containers that contain a specific item. Using Breadth-First-Search, this mod will find the shortest path to the correct container, and draw the path onto the player's screen",
+        "skills":[
+            "C#",
+            ".NET",
+            "SMAPI API"
+        ],
+        "extra": "2,000+ downloads"
+    },
+    {
+        "name":"StickiTime",
+        "description": "A cross-platform desktop application that is overlayed on top of other applications. This features a pomodoro timer, customizable sticky notes, and a bookmarks panel.",
+        "skills":[
+            "Electron Js",
+            "React",
+            "Node.js",
+            "Tailwind CSS"
+        ],
+        "extra": ""
+    },
+    {
+        "title": "Canvashark",
+        "description": "Full-stack web application that features a Kanban board. Allows users to import their college Canvas assignments automatically with their Canvas API. Includes custom task creation ad draggable sticky notes.",
+        "skills": [
+            "Canvas LMS API",
+            "Node.js",
+            "React",
+            "Vercel"
+        ],
+        "extra": "Won #1 Best UI/UX for Marina Hacks Hackathon"
+    },
+    {
+        "title": "Stardew Valley: More Sorting Mod",
+        "description": "Allows users to sort items within containers based on extra criterias such as sorting by price, and alphabetically. Has configurable settings and persistent options with the use of the Generic Mod Config Menu API",
+        "skills": [
+            "C#",
+            ".NET",
+            "SMAPI API"
+        ],
+        "extra": "2,000+ downloads"
+    }
+
+]
