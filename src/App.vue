@@ -1,14 +1,15 @@
 <script setup lang="ts">
-import Navbar from './assets/Navbar.vue'
-import { ref } from 'vue'
-import Projects from '@/assets/data/Projects.json'
-import ExperienceCard from './assets/ExperienceCard.vue'
-import WorkExperienceData from '@/assets/data/WorkExperiences.json'
-import ProjectCard from './assets/ProjectCard.vue'
-const currentProjectView = ref([])
+import Navbar from "./assets/Navbar.vue";
+import { ref } from "vue";
+import Projects from "@/assets/data/Projects.json";
+import ExperienceCard from "./assets/ExperienceCard.vue";
+import WorkExperienceData from "@/assets/data/WorkExperiences.json";
+import ProjectCard from "./assets/ProjectCard.vue";
+import ProjectViewBox from "./assets/ProjectViewBox.vue";
+const currentProjectView = ref([]);
 const setProjectView = (project) => {
-  currentProjectView.value = project
-}
+  currentProjectView.value = project;
+};
 </script>
 <template>
   <v-app>
@@ -23,10 +24,10 @@ const setProjectView = (project) => {
                 <p class="text-8xl font-semibold text-(--color-text)">Hello I'm</p>
                 <p class="text-8xl font-semibold text-(--color-secondary)">Chris Kau</p>
                 <p class="pt-4 text-xl text-(--color-secondary) max-w-130">
-                  I'm a student at California State University of Long Beach and I enjoy building
-                  projects that are genuinely useful to people. This includes quality-of-life game
-                  mods that improve the player experience, and practical web applications that are
-                  impactful to other people!
+                  I'm a student at California State University of Long Beach and I enjoy
+                  building projects that are genuinely useful to people. This includes
+                  quality-of-life game mods that improve the player experience, and
+                  practical web applications that are impactful to other people!
                 </p>
               </div>
               <v-container class="social-icons d-flex flex-row ga-md-7 ps-1">
@@ -160,7 +161,9 @@ const setProjectView = (project) => {
                 </v-container>
               </v-container>
 
-              <v-container width="700" height="700" class="bg-amber-500"> </v-container>
+              <v-container class="bg-amber-500 pa-0" width="600" height="600">
+                <ProjectViewBox></ProjectViewBox>
+              </v-container>
             </v-container>
           </v-container>
         </section>
@@ -191,9 +194,7 @@ section {
 }
 .social-icons .v-icon {
   color: var(--color-secondary);
-  transition:
-    color 0.2s easy,
-    transform 0.2s ease;
+  transition: color 0.2s easy, transform 0.2s ease;
 }
 
 .social-icons .v-btn:hover .v-icon {
@@ -233,7 +234,7 @@ section {
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
 }
 
 .scroll-container {
@@ -255,7 +256,4 @@ section {
   background-color: var(--color-accent);
   border-radius: 8px;
 }
-
-
-
 </style>
