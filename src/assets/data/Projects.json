@@ -19,10 +19,12 @@
             "Node.js",
             "Tailwind CSS"
         ],
-        "extra": ""
+        "extra": "",
+        "image": "ItemLocator.png"
+
     },
     {
-        "title": "Canvashark",
+        "name": "Canvashark",
         "description": "Full-stack web application that features a Kanban board. Allows users to import their college Canvas assignments automatically with their Canvas API. Includes custom task creation ad draggable sticky notes.",
         "skills": [
             "Canvas LMS API",
@@ -30,17 +32,21 @@
             "React",
             "Vercel"
         ],
-        "extra": "Won #1 Best UI/UX for Marina Hacks Hackathon"
+        "extra": "Won #1 Best UI/UX for Marina Hacks Hackathon",
+        "image": "ItemLocator.png"
+
     },
     {
-        "title": "More Sorting",
+        "name": "More Sorting",
         "description": "Allows users to sort items within containers based on extra criterias such as sorting by price, and alphabetically. Has configurable settings and persistent options with the use of the Generic Mod Config Menu API",
         "skills": [
             "C#",
             ".NET",
             "SMAPI API"
         ],
-        "extra": "2,000+ downloads"
+        "extra": "2,000+ downloads",
+        "image": "ItemLocator.png"
+
     }
 
 ]
