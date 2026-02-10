@@ -150,7 +150,7 @@ const setProjectView = (project) => {
             </p>
             <v-container class="d-flex bg-green-500" max-width="100%">
               <v-container class="pl-0 ml-0 bg-blue-500" max-width="50%">
-                <v-container class="projects-flex">
+                <v-container class="d-flex flex-wrap ga-3">
                   <ProjectCard
                     v-for="(item, i) in Projects"
                     :key="i"
@@ -255,19 +255,7 @@ section {
   background-color: var(--color-accent);
   border-radius: 8px;
 }
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-}
-.projects-flex {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
 
-.projects-flex > * {
-  flex: 1 1 260px; /* grow, shrink, min width */
-  max-width: 360px; /* optional cap */
-}
+
+
 </style>

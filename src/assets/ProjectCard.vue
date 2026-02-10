@@ -1,9 +1,10 @@
 <script setup>
 defineProps(["project"])
+const dims = 250
 </script>
 
 <template>
- <v-card width="300" max-width="300" max-height="300" height="300" hover color="secondary" class="project-card">
+ <v-card :width="dims" :max-width="dims" :max-height="dims" :height="dims" hover color="secondary" class="project-card">
   <div class="flex text-4xl card-darken justify-center items-center mono font-weight-black">Learn More</div>
   <v-img
     :src="`./${project.image}`"
