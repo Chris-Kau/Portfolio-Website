@@ -161,7 +161,7 @@ const setProjectView = (project) => {
                 </v-container>
               </v-container>
 
-              <v-container class="bg-amber-500 pa-0" width="600" height="600">
+              <v-container class="bg-amber-500 pa-0" width="500" height="500">
                 <ProjectViewBox></ProjectViewBox>
               </v-container>
             </v-container>
