@@ -5,7 +5,7 @@ const dims = 250
 
 <template>
  <v-card :width="dims" :max-width="dims" :max-height="dims" :height="dims" hover color="secondary" class="project-card">
-  <div class="flex text-4xl card-darken justify-center items-center mono font-weight-black">Learn More</div>
+  <div class="flex text-center card-darken justify-center items-center mono font-weight-black pa-3">{{project.shortDescription}}</div>
   <v-img
     :src="`./${project.image}`"
     height="300"
