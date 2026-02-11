@@ -145,12 +145,12 @@ const setProjectView = (project) => {
         <v-divider />
 
         <section id="projects">
-          <v-container class="py-16 bg-yellow-500" max-width="95%">
+          <v-container class="py-16" max-width="95%">
             <p class="mono text-8xl font-semibold text-(--color-text) mb-10 text-center">
               Projects
             </p>
-            <v-container class="d-flex bg-green-500" max-width="100%">
-              <v-container class="pl-0 ml-0 bg-blue-500" max-width="50%">
+            <v-container class="d-flex" max-width="100%">
+              <v-container class="pl-0 ml-0" max-width="50%">
                 <v-container class="d-flex flex-wrap ga-3">
                   <ProjectCard
                     v-for="(item, i) in Projects"
@@ -161,7 +161,7 @@ const setProjectView = (project) => {
                 </v-container>
               </v-container>
 
-              <v-container class="bg-amber-500 pa-0" width="500" height="500">
+              <v-container class="pa-0" width="500" height="500">
                 <ProjectViewBox :project="currentProjectView || {}"></ProjectViewBox>
               </v-container>
             </v-container>
