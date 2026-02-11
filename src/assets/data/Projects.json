@@ -2,6 +2,7 @@
     {
         "name":"Item Locator",
         "description": "Allows users to search for containers that contain a specific item. Using Breadth-First-Search, this mod will find the shortest path to the correct container, and draw the path onto the player's screen",
+        "shortDescription":"A Stardew Valley mod that allows users to search for containers that hold a specific item.",
         "skills":[
             "C#",
             ".NET",
@@ -13,6 +14,7 @@
     {
         "name":"StickiTime",
         "description": "A cross-platform desktop application that is overlayed on top of other applications. This features a pomodoro timer, customizable sticky notes, and a bookmarks panel.",
+        "shortDescription": "A cross-platform desktop application that is overlayed on top of other applications.",
         "skills":[
             "Electron Js",
             "React",
@@ -26,6 +28,7 @@
     {
         "name": "Canvashark",
         "description": "Full-stack web application that features a Kanban board. Allows users to import their college Canvas assignments automatically with their Canvas API. Includes custom task creation ad draggable sticky notes.",
+        "shortDescription": "A Full-stack web application that features a Kanban board and integrates the Canvas API.",
         "skills": [
             "Canvas LMS API",
             "Node.js",
@@ -39,6 +42,7 @@
     {
         "name": "More Sorting",
         "description": "Allows users to sort items within containers based on extra criterias such as sorting by price, and alphabetically. Has configurable settings and persistent options with the use of the Generic Mod Config Menu API",
+        "shortDescription": "A Stardew Valley mod that Allows users to sort items within containers based on more criterias.",
         "skills": [
             "C#",
             ".NET",
