@@ -1,27 +1,41 @@
 <script setup>
-defineProps(["project"])
-const dims = 250
+defineProps(["project"]);
+const dims = 200;
 </script>
 
 <template>
- <v-card :width="dims" :max-width="dims" :max-height="dims" :height="dims" hover color="secondary" class="project-card">
-  <div class="flex text-center card-darken justify-center items-center mono font-weight-black pa-3">{{project.shortDescription}}</div>
-  <v-img
-    :src="`./${project.image}`"
-    height="300"
-    width="300"
-    class="mono align-end text-white project-img"
+  <v-card
+    :width="dims"
+    :max-width="dims"
+    :max-height="dims"
+    :height="dims"
+    hover
+    color="secondary"
+    class="project-card"
+    style="aspect-ratio: 1/1"
   >
-    <div class="img-gradient">
-      <v-card-title class="pa-0">
-        {{ project.name }}
-      </v-card-title>
+    <div
+      class="d-flex text-center card-darken justify-center align-center mono font-weight-black pa-3"
+    >
+      {{ project.shortDescription }}
     </div>
-  </v-img>
+    <v-img
+      :src="`./${project.image}`"
+      :height="dims"
+      :width="dims"
+      cover
+      class="mono align-end text-white project-img"
+      style="aspect-ratio: 1/1"
+    >
+      <div class="img-gradient">
+        <v-card-title class="pa-0">
+          {{ project.name }}
+        </v-card-title>
+      </div>
+    </v-img>
 
-  <v-card-item class="pa-0">
-  </v-card-item>
-</v-card>
+    <v-card-item class="pa-0"> </v-card-item>
+  </v-card>
 </template>
 
 <style scoped>

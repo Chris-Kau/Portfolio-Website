@@ -12,178 +12,194 @@ const setProjectView = (project) => {
 };
 </script>
 <template>
-  <v-app>
+  <v-app class="pa-0">
     <Navbar />
-    <div class="scroll-container pa-0">
-      <v-main>
-        <section id="about">
-          <v-container class="d-flex pb-16" max-width="1100">
-            <div class="sans flex-1">
-              <div>
-                <p class="text-2xl ml-1 text-(--color-text)">Software Engineer</p>
-                <p class="text-8xl font-semibold text-(--color-text)">Hello I'm</p>
-                <p class="text-8xl font-semibold text-(--color-secondary)">Chris Kau</p>
-                <p class="pt-4 text-xl text-(--color-secondary) max-w-130">
-                  I'm a student at California State University of Long Beach and I enjoy
-                  building projects that are genuinely useful to people. This includes
-                  quality-of-life game mods that improve the player experience, and
-                  practical web applications that are impactful to other people!
-                </p>
-              </div>
-              <v-container class="social-icons d-flex flex-row ga-md-7 ps-1">
-                <v-btn height="50" class="resume-btn text-white" variant="tonal">
-                  View Resume
-                  <v-icon size="20" class="ms-2 text-white"> mdi-file-document </v-icon>
-                </v-btn>
-                <v-btn
-                  size="50"
-                  class="social-icons bg-transparent"
-                  variant="text"
-                  href="https://github.com/Chris-Kau"
-                  target="_blank"
-                  aria-label="Github"
-                >
-                  <v-icon size="50">mdi-github</v-icon>
-                </v-btn>
-                <v-btn
-                  size="50"
-                  class="social-icons bg-transparent"
-                  variant="text"
-                  href="https://www.linkedin.com/in/chris-kau/"
-                  target="_blank"
-                  aria-label="LinkedIn"
-                >
-                  <v-icon size="50">mdi-linkedin</v-icon>
-                </v-btn>
-                <v-btn
-                  size="50"
-                  class="social-icons bg-transparent"
-                  variant="text"
-                  href="mailto:chriskau04@gmail.com?subject=Portfolio%20Contact"
-                  aria-label="Email me at chriskau04@gmail.com"
-                >
-                  <v-icon size="50">mdi-email</v-icon>
-                </v-btn>
-              </v-container>
-            </div>
-            <div class="image-wrapper">
-              <img
-                src="./assets/images/oshawott shadow.png"
-                class="shadow-overlay mt-7 ml-6"
-                alt=""
-                aria-hidden="true"
-                style
-              />
-              <img
-                src="./assets/images/about oshawott.png"
-                class="main-img"
-                alt="Oshawott illustration"
-              />
-            </div>
-          </v-container>
-        </section>
-        <v-divider />
+    <div class="scroll-container pt-0 pb-0">
+      <v-row no-gutters class="d-flex">
+        <v-col cols="2" class="bg-green"> </v-col>
 
-        <section id="experience">
-          <v-container class="py-16">
-            <p class="mono text-8xl font-semibold text-(--color-text) mb-10 text-center">
-              Work Experience
-            </p>
-            <v-container class="d-flex flex-row align-center justify-center">
-              <div class="image-wrapper">
-                <img
-                  src="./assets/images/oshawott shadow.png"
-                  class="shadow-overlay"
-                  style="right: 80px; top: 25px"
-                  alt="Oshawott Proud Illustration"
-                />
-                <img
-                  src="./assets/images/work oshawott.png"
-                  style="width: 500px"
-                  class="main-img"
-                  alt="Oshawott Proud Illustration"
-                />
-              </div>
-              <div class="flex-1">
-                <div class="flex justify-center align-center mb-4">
-                  <v-badge
-                    location="center"
-                    class="present-badge"
-                    text-color="ck-accent"
-                    color="ck-supportingaccent"
-                    content="present"
-                    height="35"
-                    width="100"
-                  >
-                  </v-badge>
-                </div>
-                <v-timeline align="start" line-color="ck-supportingaccent">
-                  <v-timeline-item
-                    v-for="(item, i) in WorkExperienceData"
-                    :key="i"
-                    icon="mdi-briefcase-outline"
-                    icon-color="ck-supportingaccent"
-                    fill-dot
-                    dot-color="ck-accent"
-                  >
-                    <ExperienceCard
-                      :href="item.link"
+        <v-col cols="8" style="overflow: hidden">
+          <v-main style="padding: 0 24px; margin: 0 auto">
+            <section id="about">
+              <v-container class="d-flex pb-16">
+                <div class="sans flex-1">
+                  <div>
+                    <p class="sans text-subtitle-2 ml-1" style="color: var(--color-text)">
+                      Software Engineer
+                    </p>
+                    <p
+                      class="sans text-h4 font-weight-semibold"
+                      style="color: var(--color-text)"
+                    >
+                      Hello, I'm Chris Kau
+                    </p>
+                    <p
+                      class="sans pt-2 text-subtitle-2 max-w-130"
+                      style="color: var(--color-secondary)"
+                    >
+                      I'm a student at California State University of Long Beach and I
+                      enjoy building projects that are genuinely useful to people. This
+                      includes quality-of-life game mods that improve the player
+                      experience, and practical web applications that are impactful to
+                      other people!
+                    </p>
+                  </div>
+                  <v-container class="social-icons d-flex flex-row ga-md-7 ps-1">
+                    <v-btn height="50" class="resume-btn text-white" variant="tonal">
+                      View Resume
+                      <v-icon size="20" class="ms-2 text-white">
+                        mdi-file-document
+                      </v-icon>
+                    </v-btn>
+                    <v-btn
+                      size="50"
+                      class="social-icons bg-transparent"
+                      variant="text"
+                      href="https://github.com/Chris-Kau"
                       target="_blank"
-                      :company="item.company"
-                      :role="item.role"
-                      :date="item.date"
-                      :description="item.description"
-                      :skills="item.skills"
-                    />
-                  </v-timeline-item>
-                </v-timeline>
-              </div>
-            </v-container>
-          </v-container>
-        </section>
-
-        <v-divider />
-
-        <section id="projects">
-          <v-container class="py-16" max-width="95%">
-            <p class="mono text-8xl font-semibold text-(--color-text) mb-10 text-center">
-              Projects
-            </p>
-            <v-container class="d-flex" max-width="100%">
-              <v-container class="pl-0 ml-0" max-width="50%">
-                <v-container class="d-flex flex-wrap ga-3">
-                  <ProjectCard
-                    v-for="(item, i) in Projects"
-                    :key="i"
-                    :project="item"
-                    @click="setProjectView(item)"
+                      aria-label="Github"
+                    >
+                      <v-icon size="50">mdi-github</v-icon>
+                    </v-btn>
+                    <v-btn
+                      size="50"
+                      class="social-icons bg-transparent"
+                      variant="text"
+                      href="https://www.linkedin.com/in/chris-kau/"
+                      target="_blank"
+                      aria-label="LinkedIn"
+                    >
+                      <v-icon size="50">mdi-linkedin</v-icon>
+                    </v-btn>
+                    <v-btn
+                      size="50"
+                      class="social-icons bg-transparent"
+                      variant="text"
+                      href="mailto:chriskau04@gmail.com?subject=Portfolio%20Contact"
+                      aria-label="Email me at chriskau04@gmail.com"
+                    >
+                      <v-icon size="50">mdi-email</v-icon>
+                    </v-btn>
+                  </v-container>
+                </div>
+                <div class="image-wrapper">
+                  <img
+                    src="./assets/images/oshawott shadow.png"
+                    class="shadow-overlay mt-7 ml-6"
+                    alt=""
+                    aria-hidden="true"
+                    style
                   />
+                  <img
+                    src="./assets/images/about oshawott.png"
+                    class="main-img"
+                    alt="Oshawott illustration"
+                  />
+                </div>
+              </v-container>
+            </section>
+            <v-divider />
+
+            <section id="experience">
+              <v-container class="">
+                <p
+                  class="mono text-h4 font-weight-bold text-(--color-text) mb-10 text-center"
+                >
+                  Work Experience
+                </p>
+                <v-container class="d-flex flex-row align-center justify-center">
+                  <div class="flex-1 justify-center">
+                    <div class="d-flex justify-center align-center mb-4">
+                      <v-badge
+                        location="center"
+                        class="present-badge"
+                        text-color="ck-accent"
+                        color="ck-supportingaccent"
+                        content="present"
+                        height="35"
+                        width="100"
+                      >
+                      </v-badge>
+                    </div>
+                    <v-timeline align="start" line-color="ck-supportingaccent">
+                      <v-timeline-item
+                        v-for="(item, i) in WorkExperienceData"
+                        :key="i"
+                        icon="mdi-briefcase-outline"
+                        icon-color="ck-supportingaccent"
+                        fill-dot
+                        dot-color="ck-accent"
+                      >
+                        <ExperienceCard
+                          :href="item.link"
+                          target="_blank"
+                          :company="item.company"
+                          :role="item.role"
+                          :date="item.date"
+                          :description="item.description"
+                          :skills="item.skills"
+                        />
+                      </v-timeline-item>
+                    </v-timeline>
+                  </div>
                 </v-container>
               </v-container>
+            </section>
 
-              <v-container class="pa-0" width="500" height="500" style="max-width: 500px; max-height:500px">
-                <ProjectViewBox :project="currentProjectView || {}"></ProjectViewBox>
+            <v-divider />
+
+            <section id="projects">
+              <v-container class="" max-width="95%">
+                <p
+                  class="mono text-h4 font-weight-bold text-(--color-text) mt-0 pt-0 text-center"
+                >
+                  Projects
+                </p>
+                <v-container class="d-flex flex-row" max-width="100%">
+                  <v-container
+                    class="pa-0 d-flex"
+                    width="500"
+                    height="500"
+                    style="max-width: 500px; max-height: 500px"
+                  >
+                    <ProjectViewBox :project="currentProjectView || {}"></ProjectViewBox>
+                  </v-container>
+                  <v-container
+                    class="d-flex flex-column ga-5 pt-0 pb-0 pr-5"
+                    style="overflow-y: auto; max-height: 500px; width: fit-content"
+                  >
+                    <ProjectCard
+                      v-for="(item, i) in Projects"
+                      :key="i"
+                      :project="item"
+                      @click="setProjectView(item)"
+                      style="flex-shrink: 0"
+                    />
+                  </v-container>
+                </v-container>
               </v-container>
-            </v-container>
-          </v-container>
-        </section>
+            </section>
 
-        <v-divider />
+            <v-divider />
 
-        <section id="skills">
-          <v-container class="py-16">
-            <img src="./assets/images/about oshawott.png" />
-          </v-container>
-        </section>
+            <section id="skills">
+              <v-container class="py-16">
+                <img src="./assets/images/about oshawott.png" />
+              </v-container>
+            </section>
 
-        <v-divider />
+            <v-divider />
 
-        <section id="contact">
-          <v-container class="py-16">
-            <img src="./assets/images/about oshawott.png" />
-          </v-container>
-        </section>
-      </v-main>
+            <section id="contact">
+              <v-container class="py-16">
+                <img src="./assets/images/about oshawott.png" />
+              </v-container>
+            </section>
+          </v-main>
+        </v-col>
+
+        <v-col cols="2" class="bg-green"> </v-col>
+      </v-row>
     </div>
   </v-app>
 </template>
@@ -239,7 +255,7 @@ section {
 
 .scroll-container {
   height: calc(100vh - 85px);
-  margin-top: 70px;
+  margin-top: 60px;
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-width: thin;

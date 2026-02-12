@@ -1,12 +1,11 @@
 <script setup>
-const props = defineProps(['project'])
+const props = defineProps(["project"]);
 </script>
 
 <template>
   <v-container
-    class="d-flex flex-col border pa-0 bg-(--color-primary) overflow-hidden"
-    width="100%"
-    height="100%"
+    class="d-flex flex-column border pa-0 overflow-hidden"
+    style="aspect-ratio: 1/1"
   >
     <v-container class="pa-0" style="max-height: 55%; flex: 0 0 55%">
       <video
@@ -19,7 +18,10 @@ const props = defineProps(['project'])
         muted
         controls
       />
-      <div v-else style="width: 100%; height: 100%; min-width: 100%; min-height: 100%; flex: 1">
+      <div
+        v-else
+        style="width: 100%; height: 100%; min-width: 100%; min-height: 100%; flex: 1"
+      >
         Please Select a Project
       </div>
     </v-container>
@@ -49,7 +51,12 @@ const props = defineProps(['project'])
                 </template>
               </v-tooltip>
 
-              <v-tooltip class="pa-0" text="External" v-if="project.extralink" location="top">
+              <v-tooltip
+                class="pa-0"
+                text="External"
+                v-if="project.extralink"
+                location="top"
+              >
                 <template v-slot:activator="{ props }">
                   <v-btn
                     v-bind="props"
@@ -65,7 +72,11 @@ const props = defineProps(['project'])
           </v-card-item>
 
           <!-- Extra Detail -->
-          <v-card-item class="pb-2 pt-0" v-if="project.extra !== ''" style="flex: 0 0 auto">
+          <v-card-item
+            class="pb-2 pt-0"
+            v-if="project.extra !== ''"
+            style="flex: 0 0 auto"
+          >
             <v-container class="pa-0 d-flex flex-row ga-0 align-center justify-center">
               <v-icon size="20">mdi-download</v-icon>
               <v-card-text class="sans pl-1 pa-0">{{ project.extra }}</v-card-text>
@@ -123,6 +134,4 @@ const props = defineProps(['project'])
 .thin-scroll::-webkit-scrollbar {
   height: 4px;
 }
-
-
 </style>
