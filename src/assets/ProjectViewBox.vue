@@ -3,12 +3,23 @@ const props = defineProps(['project'])
 </script>
 
 <template>
-  <v-container class="d-flex flex-col border pa-0 bg-(--color-primary)" width="100%" height="100%">
-    <v-container class="bg-white" height="600"> Insert video heres</v-container>
+  <v-container class="d-flex flex-col border pa-0 bg-(--color-primary) overflow-hidden" width="100%" height="100%">
+    <v-container class="pa-0" height="600">
+      <video
+        v-if="project.demoFile"
+        :src="`./${project.demoFile}`"
+        style="width: 100%; height: 100%; object-fit: fill"
+        class="pa-0"
+        autoplay
+        loop
+        muted
+        controls
+      />
+    </v-container>
     <v-divider class="pa-0"></v-divider>
     <v-container class="ma-0 pa-0 d-flex grow" height="100%">
-      <v-card v-if="project" class="">
-        <v-card-item class="pt-0">
+      <v-card v-if="project" >
+        <v-card-item class="pt-1 pl-1">
           <v-container class="d-flex flex-row align-center pa-0">
             <v-card-text class="mono text-h5 font-weight-black pt-0 pb-0 ma-0">{{
               project.name
@@ -40,15 +51,12 @@ const props = defineProps(['project'])
             </v-tooltip>
           </v-container>
 
-        <v-card-item class="pb-0 pt-0" v-if="project.extra !== ''">
-          <v-container class="pa-0 d-flex flex-row ga-0 align-center justify-center">
-            <v-icon size="20">mdi-download</v-icon>
-            <v-card-text class="sans pl-1 pa-0" >{{
-              project.extra
-            }}</v-card-text>
-          </v-container>
-
-        </v-card-item>
+          <v-card-item class="pb-2 pt-0" v-if="project.extra !== ''">
+            <v-container class="pa-0 d-flex flex-row ga-0 align-center justify-center">
+              <v-icon size="20">mdi-download</v-icon>
+              <v-card-text class="sans pl-1 pa-0">{{ project.extra }}</v-card-text>
+            </v-container>
+          </v-card-item>
 
           <v-card-text class="sans pt-0 pb-1">{{ project.description }}</v-card-text>
         </v-card-item>

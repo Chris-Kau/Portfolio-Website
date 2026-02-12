@@ -11,7 +11,8 @@
         "extra": "2,000+ downloads",
         "image": "ItemLocator.png",
         "github": "https://github.com/Chris-Kau/SDV-Item-Locator",
-        "extralink": "https://www.nexusmods.com/stardewvalley/mods/27409"
+        "extralink": "https://www.nexusmods.com/stardewvalley/mods/27409",
+        "demoFile": "ItemLocatorDemo.mp4"
     },
     {
         "name":"StickiTime",
@@ -58,7 +59,8 @@
         "extra": "2,000+ downloads",
         "image": "ItemLocator.png",
         "github": "https://github.com/Chris-Kau/sdv-more-sorting",
-        "extralink": "https://www.nexusmods.com/stardewvalley/mods/22944"
+        "extralink": "https://www.nexusmods.com/stardewvalley/mods/22944",
+        "demoFile": "MoreSortingDemo.mp4"
 
     }
 
