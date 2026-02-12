@@ -25,7 +25,7 @@
             "Tailwind CSS"
         ],
         "extra": "",
-        "image": "ItemLocator.png",
+        "image": "StickiTime.png",
         "github": "https://github.com/Chris-Kau/StickiTime",
         "extralink": ""
 
@@ -41,7 +41,7 @@
             "Vercel"
         ],
         "extra": "Won #1 Best UI/UX for Marina Hacks Hackathon",
-        "image": "ItemLocator.png",
+        "image": "Canvashark.png",
         "github": "https://github.com/Chris-Kau/Canvashark",
         "extralink": "https://canvashark.vercel.app/"
 
@@ -57,7 +57,7 @@
             "SMAPI API"
         ],
         "extra": "2,000+ downloads",
-        "image": "ItemLocator.png",
+        "image": "MoreSorting.png",
         "github": "https://github.com/Chris-Kau/sdv-more-sorting",
         "extralink": "https://www.nexusmods.com/stardewvalley/mods/22944",
         "demoFile": "MoreSortingDemo.mp4"
