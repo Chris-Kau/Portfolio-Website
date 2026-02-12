@@ -161,7 +161,7 @@ const setProjectView = (project) => {
                 </v-container>
               </v-container>
 
-              <v-container class="pa-0" width="500" height="500">
+              <v-container class="pa-0" width="500" height="500" style="max-width: 500px; max-height:500px">
                 <ProjectViewBox :project="currentProjectView || {}"></ProjectViewBox>
               </v-container>
             </v-container>
