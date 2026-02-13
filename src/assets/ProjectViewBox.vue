@@ -1,12 +1,10 @@
 <script setup>
-const props = defineProps(["project"]);
+const props = defineProps(['project'])
+import ProjectTooltipBtn from './ProjectTooltipBtn.vue'
 </script>
 
 <template>
-  <v-container
-    class="d-flex flex-column border pa-0 overflow-hidden"
-    style="aspect-ratio: 1/1"
-  >
+  <v-container class="d-flex flex-column border pa-0 overflow-hidden" style="aspect-ratio: 1/1">
     <v-container class="pa-0" style="max-height: 55%; flex: 0 0 55%">
       <video
         v-if="project.demoFile"
@@ -18,10 +16,7 @@ const props = defineProps(["project"]);
         muted
         controls
       />
-      <div
-        v-else
-        style="width: 100%; height: 100%; min-width: 100%; min-height: 100%; flex: 1"
-      >
+      <div v-else style="width: 100%; height: 100%; min-width: 100%; min-height: 100%; flex: 1">
         Please Select a Project
       </div>
     </v-container>
@@ -41,57 +36,55 @@ const props = defineProps(["project"]);
         <!-- TOP + DESCRIPTION AREA-->
         <div class="d-flex flex-column pb-0" style="flex: 1; min-height: 0">
           <!-- Title row -->
-          <v-card-item class="pt-1 pl-1 pb-0" style="flex: 0 0 auto">
+          <v-card-item
+            class="pt-1 pl-1 pb-0 text-white"
+            style="flex: 0 0 auto; background-color: var(--color-secondary)"
+          >
             <v-container class="d-flex flex-row align-center pa-0">
               <v-card-text class="mono text-h5 font-weight-black pt-0 pb-0 ma-0">
                 {{ project.name }}
               </v-card-text>
+              <div class="project-social-icons pa-0">
+                  <ProjectTooltipBtn
+                  v-for="(item, i) in project.links"
+                  :text="item.name"
+                  location="bottom"
+                  :icon="item.icon"
+                  :link="item.link"
+                  size="30"
+                />
+                <!-- <ProjectTooltipBtn
+                  v-if="project.github"
+                  text="Github"
+                  location="bottom"
+                  icon="mdi-github"
+                  :link="project.github"
+                  size="30"
+                />
 
-              <v-tooltip class="pa-0" text="Github" v-if="project.github" location="top">
-                <template v-slot:activator="{ props }">
-                  <v-btn
-                    v-bind="props"
-                    class="pa-0 ma-0"
-                    icon="mdi-github"
-                    flat
-                    size="40"
-                    :href="project.github"
-                    style="background-color: transparent"
-                  />
-                </template>
-              </v-tooltip>
-
-              <v-tooltip
-                class="pa-0"
-                text="External"
-                v-if="project.extralink"
-                location="top"
-              >
-                <template v-slot:activator="{ props }">
-                  <v-btn
-                    v-bind="props"
-                    class="pa-0 ma-0"
-                    icon="mdi-link-variant"
-                    flat
-                    size="40"
-                    :href="project.extralink"
-                    style="background-color: transparent"
-                  />
-                </template>
-              </v-tooltip>
+                <ProjectTooltipBtn
+                  v-if="project.extralink"
+                  text="External"
+                  location="bottom"
+                  icon="mdi-link-variant"
+                  :link="project.extralink"
+                  size="30"
+                /> -->
+              </div>
             </v-container>
           </v-card-item>
 
           <!-- Extra Detail -->
           <v-card-item
-            class="pb-2 pt-0"
+            class="d-flex flex-row align-center pb-2 pt-0 text-white"
             v-if="project.extra !== ''"
-            style="flex: 0 0 auto"
+            style="flex: 0 0 auto; background-color: var(--color-secondary)"
           >
-            <v-container class="pa-0 d-flex flex-row ga-0 align-center justify-center">
+            <template v-slot:subtitle>
               <v-icon size="20">{{ project.extraicon }}</v-icon>
-              <v-card-text class="sans pl-1 pa-0">{{ project.extra }}</v-card-text>
-            </v-container>
+              <span class="pl-2">{{ project.extra }}</span>
+
+            </template>
           </v-card-item>
 
           <v-divider class="pb-0" />

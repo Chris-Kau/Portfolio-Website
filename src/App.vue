@@ -78,18 +78,21 @@ const setProjectView = (project) => {
                       location="bottom"
                       link="https://github.com/Chris-Kau"
                       icon="mdi-github"
+                      size="50"
                     />
                     <TooltipBtn
                       text="LinkedIn"
                       location="bottom"
                       link="https://www.linkedin.com/in/chris-kau/"
                       icon="mdi-linkedin"
+                      size="50"
                     />
                     <TooltipBtn
                       text="chriskau04@gmail.com"
                       location="bottom"
                       link="mailto:chriskau04@gmail.com?subject=Portfolio%20Contact"
                       icon="mdi-email"
+                      size="50"
                     />
                   </v-container>
                 </div>
@@ -220,23 +223,12 @@ const setProjectView = (project) => {
 section {
   scroll-margin-top: 0px;
 }
-.social-icons .v-icon {
-  color: var(--color-secondary);
-  transition: color 0.2s easy, transform 0.2s ease;
-}
-
-.social-icons .v-btn:hover .v-icon {
-  color: var(--color-primary);
-  transform: scale(1.1);
-}
 .resume-btn {
   background: var(--color-secondary);
   transition: color 0.2s;
 }
 
 .resume-btn:hover {
-  color: var(--color-secondary);
-  background: var(--color-primary);
   transform: scale(1.1);
 }
 

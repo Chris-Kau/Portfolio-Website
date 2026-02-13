@@ -4,7 +4,7 @@
       <v-btn
         v-bind="props"
         size="50"
-        class="social-icons"
+        class="project-social-icons"
         variant="text"
         :href="link"
         :aria-label="aria"
@@ -22,12 +22,12 @@ defineProps(["location", "text", "icon", "link", "aria", "size"]);
 </script>
 
 <style scoped>
-.social-icons .v-icon {
-  color: var(--color-secondary) !important;
+.project-social-icons .v-icon {
+  color: white !important;
   transition: color 0.2s easy, transform 0.2s ease !important;
 }
 
-.social-icons .v-btn:hover .v-icon {
+.project-social-icons .v-btn:hover .v-icon {
   color: var(--color-primary) !important;
   transform: scale(1.1) !important;
 }

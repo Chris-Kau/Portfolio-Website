@@ -75,4 +75,5 @@ const dims = 200;
 .skill-chip :deep(.v-chip__content) {
   color: var(--color-supportingaccent);
 }
+
 </style>
