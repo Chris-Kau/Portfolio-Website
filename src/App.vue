@@ -6,6 +6,7 @@ import ExperienceCard from "./assets/ExperienceCard.vue";
 import WorkExperienceData from "@/assets/data/WorkExperiences.json";
 import ProjectCard from "./assets/ProjectCard.vue";
 import ProjectViewBox from "./assets/ProjectViewBox.vue";
+import TooltipBtn from "./assets/TooltipBtn.vue";
 const currentProjectView = ref({});
 const setProjectView = (project) => {
   currentProjectView.value = project;
@@ -21,17 +22,28 @@ const setProjectView = (project) => {
         <v-col cols="8" style="overflow: hidden">
           <v-main style="padding: 0 24px; margin: 0 auto">
             <section id="about">
-              <v-container class="d-flex pb-16">
-                <div class="sans flex-1">
+              <v-container class="d-flex align-center pb-16">
+                <div class="sans flex-1" style="max-width: 600px">
                   <div>
-                    <p class="sans text-subtitle-2 ml-1" style="color: var(--color-text)">
+                    <p
+                      class="sans text-subtitle-2 ml-1"
+                      style="
+                        color: var(--color-text);
+                        background-color: var(--color-accent);
+                        width: fit-content;
+                      "
+                    >
                       Software Engineer
                     </p>
-                    <p
-                      class="sans text-h4 font-weight-semibold"
-                      style="color: var(--color-text)"
-                    >
-                      Hello, I'm Chris Kau
+                    <p class="sans text-h4 font-weight-semibold">
+                      <span style="color: var(--color-secondary)">Hello, I'm </span>
+                      <span
+                        style="
+                          color: var(--color-text);
+                          background-color: var(--color-accent);
+                        "
+                        >Chris Kau</span
+                      >
                     </p>
                     <p
                       class="sans pt-2 text-subtitle-2 max-w-130"
@@ -45,41 +57,40 @@ const setProjectView = (project) => {
                     </p>
                   </div>
                   <v-container class="social-icons d-flex flex-row ga-md-7 ps-1">
-                    <v-btn height="50" class="resume-btn text-white" variant="tonal">
-                      View Resume
-                      <v-icon size="20" class="ms-2 text-white">
-                        mdi-file-document
-                      </v-icon>
-                    </v-btn>
-                    <v-btn
-                      size="50"
-                      class="social-icons bg-transparent"
-                      variant="text"
-                      href="https://github.com/Chris-Kau"
-                      target="_blank"
-                      aria-label="Github"
-                    >
-                      <v-icon size="50">mdi-github</v-icon>
-                    </v-btn>
-                    <v-btn
-                      size="50"
-                      class="social-icons bg-transparent"
-                      variant="text"
-                      href="https://www.linkedin.com/in/chris-kau/"
-                      target="_blank"
-                      aria-label="LinkedIn"
-                    >
-                      <v-icon size="50">mdi-linkedin</v-icon>
-                    </v-btn>
-                    <v-btn
-                      size="50"
-                      class="social-icons bg-transparent"
-                      variant="text"
-                      href="mailto:chriskau04@gmail.com?subject=Portfolio%20Contact"
-                      aria-label="Email me at chriskau04@gmail.com"
-                    >
-                      <v-icon size="50">mdi-email</v-icon>
-                    </v-btn>
+                    <v-tooltip class="pa-0" location="bottom" text="Resume">
+                      <template v-slot:activator="{ props }">
+                        <v-btn
+                          v-bind="props"
+                          height="50"
+                          class="resume-btn text-white"
+                          variant="tonal"
+                        >
+                          View Resume
+                          <v-icon size="20" class="ms-2 text-white">
+                            mdi-file-document
+                          </v-icon>
+                        </v-btn>
+                      </template>
+                    </v-tooltip>
+
+                    <TooltipBtn
+                      text="Github"
+                      location="bottom"
+                      link="https://github.com/Chris-Kau"
+                      icon="mdi-github"
+                    />
+                    <TooltipBtn
+                      text="LinkedIn"
+                      location="bottom"
+                      link="https://www.linkedin.com/in/chris-kau/"
+                      icon="mdi-linkedin"
+                    />
+                    <TooltipBtn
+                      text="chriskau04@gmail.com"
+                      location="bottom"
+                      link="mailto:chriskau04@gmail.com?subject=Portfolio%20Contact"
+                      icon="mdi-email"
+                    />
                   </v-container>
                 </div>
                 <div class="image-wrapper">
@@ -88,12 +99,13 @@ const setProjectView = (project) => {
                     class="shadow-overlay mt-7 ml-6"
                     alt=""
                     aria-hidden="true"
-                    style
+                    style="width: 100%"
                   />
                   <img
                     src="./assets/images/about oshawott.png"
                     class="main-img"
                     alt="Oshawott illustration"
+                    style="width: 100%"
                   />
                 </div>
               </v-container>
