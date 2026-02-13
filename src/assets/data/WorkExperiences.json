@@ -1,4 +1,18 @@
 [
+        {
+        "company": "The Coder School",
+        "role": "Coding Coach",
+        "date": "July 2024 - January 2025",
+        "description": "Worked closely with students in 2:1 sessions, guiding them through hands-on programming projects. Encouraged curiosity and collaboration by helping students reverse-engineer games and build projects that align with their interests.",
+        "skills":[
+            "HTML5",
+            "CSS",
+            "JavaScript",
+            "Python",
+            "Lua"
+        ],
+        "link":"https://www.thecoderschool.com/locations/cerritos/"
+    },
     {
         "company": "G2 Software Systems",
         "role": "Software Engineer Intern",
@@ -16,19 +30,6 @@
             "MVC"
         ],
         "link":"https://g2ss.com/"
-    },
-    {
-        "company": "The Coder School",
-        "role": "Coding Coach",
-        "date": "July 2024 - January 2025",
-        "description": "Worked closely with students in 2:1 sessions, guiding them through hands-on programming projects. Encouraged curiosity and collaboration by helping students reverse-engineer games and build projects that align with their interests.",
-        "skills":[
-            "HTML5",
-            "CSS",
-            "JavaScript",
-            "Python",
-            "Lua"
-        ],
-        "link":"https://www.thecoderschool.com/locations/cerritos/"
     }
+
 ]

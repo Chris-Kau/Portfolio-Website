@@ -4,10 +4,19 @@ import ProjectTooltipBtn from './ProjectTooltipBtn.vue'
 </script>
 
 <template>
-  <v-container class="d-flex flex-column border pa-0 overflow-hidden" style="aspect-ratio: 1/1">
+  <v-container
+    v-if="project.name"
+    class="d-flex flex-column pa-0 overflow-hidden"
+    style="
+      aspect-ratio: 1/1;
+      background-color: transparent;
+      border-radius: 8px;
+      border: 1px solid var(--color-primary);
+      box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+    "
+  >
     <v-container class="pa-0" style="max-height: 55%; flex: 0 0 55%">
       <video
-        v-if="project.demoFile"
         :src="`./${project.demoFile}`"
         style="width: 100%; height: 100%; object-fit: fill; display: block"
         class="pa-0"
@@ -16,21 +25,22 @@ import ProjectTooltipBtn from './ProjectTooltipBtn.vue'
         muted
         controls
       />
-      <div v-else style="width: 100%; height: 100%; min-width: 100%; min-height: 100%; flex: 1">
-        Please Select a Project
-      </div>
     </v-container>
     <v-divider class="pa-0"></v-divider>
 
-    <v-container class="ma-0 pa-0 d-flex flex-column" style="flex: 1; min-height: 0">
+    <v-container
+      class="ma-0 pa-0 d-flex flex-column"
+      style="flex: 1; min-height: 0; background-color: transparent"
+    >
       <v-card
         v-if="project"
         class="d-flex flex-column"
         style="
           flex: 1;
           min-height: 0;
-          background-color: var(--color-primary);
+          background-color: transparent;
           color: var(--color-paragraph-text);
+          border-radius: 0px;
         "
       >
         <!-- TOP + DESCRIPTION AREA-->
@@ -45,7 +55,7 @@ import ProjectTooltipBtn from './ProjectTooltipBtn.vue'
                 {{ project.name }}
               </v-card-text>
               <div class="project-social-icons pa-0">
-                  <ProjectTooltipBtn
+                <ProjectTooltipBtn
                   v-for="(item, i) in project.links"
                   :text="item.name"
                   location="bottom"
@@ -53,23 +63,6 @@ import ProjectTooltipBtn from './ProjectTooltipBtn.vue'
                   :link="item.link"
                   size="30"
                 />
-                <!-- <ProjectTooltipBtn
-                  v-if="project.github"
-                  text="Github"
-                  location="bottom"
-                  icon="mdi-github"
-                  :link="project.github"
-                  size="30"
-                />
-
-                <ProjectTooltipBtn
-                  v-if="project.extralink"
-                  text="External"
-                  location="bottom"
-                  icon="mdi-link-variant"
-                  :link="project.extralink"
-                  size="30"
-                /> -->
               </div>
             </v-container>
           </v-card-item>
@@ -83,7 +76,6 @@ import ProjectTooltipBtn from './ProjectTooltipBtn.vue'
             <template v-slot:subtitle>
               <v-icon size="20">{{ project.extraicon }}</v-icon>
               <span class="pl-2">{{ project.extra }}</span>
-
             </template>
           </v-card-item>
 
@@ -124,6 +116,27 @@ import ProjectTooltipBtn from './ProjectTooltipBtn.vue'
           </v-chip>
         </v-container>
       </v-card>
+    </v-container>
+  </v-container>
+  <v-container
+    v-else
+    class="d-flex flex-column pa-0 overflow-hidden"
+    style="
+      aspect-ratio: 1/1;
+      border-radius: 8px;
+      border: 1px solid var(--color-primary);
+      box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+      background-color: var(--color-secondary);
+    "
+  >
+    <v-container
+      class="d-flex flex-column justify-center align-center text-center"
+      style="width: 100%; height: 100%; min-width: 100%; min-height: 100%; flex: 1"
+    >
+      <span class="sans font-weight-black text-h3" style="color: var(--color-primary)">
+        Please Select a Project
+      </span>
+      <v-icon size="100" style="color: var(--color-text)">mdi-arrow-right-bold</v-icon>
     </v-container>
   </v-container>
 </template>

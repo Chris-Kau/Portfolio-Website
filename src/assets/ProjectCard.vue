@@ -11,7 +11,7 @@ const dims = 200;
     :height="dims"
     hover
     color="secondary"
-    class="project-card"
+    class="project-card pa-0 ga-0"
     style="aspect-ratio: 1/1"
   >
     <div
