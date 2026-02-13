@@ -16,7 +16,7 @@ const setProjectView = (project) => {
     <Navbar />
     <div class="scroll-container pt-0 pb-0">
       <v-row no-gutters class="d-flex">
-        <v-col cols="2" class="bg-green"> </v-col>
+        <v-col cols="2"> </v-col>
 
         <v-col cols="8" style="overflow: hidden">
           <v-main style="padding: 0 24px; margin: 0 auto">
@@ -198,7 +198,7 @@ const setProjectView = (project) => {
           </v-main>
         </v-col>
 
-        <v-col cols="2" class="bg-green"> </v-col>
+        <v-col cols="2"> </v-col>
       </v-row>
     </div>
   </v-app>

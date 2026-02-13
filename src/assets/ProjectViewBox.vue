@@ -28,7 +28,16 @@ const props = defineProps(["project"]);
     <v-divider class="pa-0"></v-divider>
 
     <v-container class="ma-0 pa-0 d-flex flex-column" style="flex: 1; min-height: 0">
-      <v-card v-if="project" class="d-flex flex-column" style="flex: 1; min-height: 0">
+      <v-card
+        v-if="project"
+        class="d-flex flex-column"
+        style="
+          flex: 1;
+          min-height: 0;
+          background-color: var(--color-primary);
+          color: var(--color-paragraph-text);
+        "
+      >
         <!-- TOP + DESCRIPTION AREA-->
         <div class="d-flex flex-column pb-0" style="flex: 1; min-height: 0">
           <!-- Title row -->
@@ -47,6 +56,7 @@ const props = defineProps(["project"]);
                     flat
                     size="40"
                     :href="project.github"
+                    style="background-color: transparent"
                   />
                 </template>
               </v-tooltip>
@@ -65,6 +75,7 @@ const props = defineProps(["project"]);
                     flat
                     size="40"
                     :href="project.extralink"
+                    style="background-color: transparent"
                   />
                 </template>
               </v-tooltip>
@@ -78,7 +89,7 @@ const props = defineProps(["project"]);
             style="flex: 0 0 auto"
           >
             <v-container class="pa-0 d-flex flex-row ga-0 align-center justify-center">
-              <v-icon size="20">mdi-download</v-icon>
+              <v-icon size="20">{{ project.extraicon }}</v-icon>
               <v-card-text class="sans pl-1 pa-0">{{ project.extra }}</v-card-text>
             </v-container>
           </v-card-item>
