@@ -1,71 +1,90 @@
 [
-    {
-        "name":"Item Locator",
-        "description": "Allows users to search for containers that contain a specific item. Using Breadth-First-Search, this mod will find the shortest path to the correct container, and draw the path onto the player's screen",
-        "shortDescription":"A Stardew Valley mod that allows users to search for containers that hold a specific item.",
-        "skills":[
-            "C#",
-            ".NET",
-            "SMAPI API"
-        ],
-        "extra": "2,000+ downloads",
-        "image": "ItemLocator.png",
-        "github": "https://github.com/Chris-Kau/SDV-Item-Locator",
-        "extralink": "https://www.nexusmods.com/stardewvalley/mods/27409",
-        "extraicon": "mdi-download",
-        "demoFile": "ItemLocatorDemo.mp4"
-    },
-    {
-        "name":"StickiTime",
-        "description": "A cross-platform desktop application that is overlayed on top of other applications. This features a pomodoro timer, customizable sticky notes, and a bookmarks panel.",
-        "shortDescription": "A cross-platform desktop application that is overlayed on top of other applications.",
-        "skills":[
-            "Electron Js",
-            "React",
-            "Node.js",
-            "Tailwind CSS"
-        ],
-        "extra": "",
-        "image": "StickiTime.png",
-        "github": "https://github.com/Chris-Kau/StickiTime",
-        "extralink": "",
-        "extraicon": ""
+  {
+    "name": "Item Locator",
+    "description": "Allows users to search for containers that contain a specific item. Using Breadth-First-Search, this mod will find the shortest path to the correct container, and draw the path onto the player's screen",
+    "shortDescription": "A Stardew Valley mod that allows users to search for containers that hold a specific item.",
+    "skills": ["C#", ".NET", "SMAPI API"],
+    "extra": "2,000+ downloads",
+    "extraicon":"mdi-download",
+    "image": "ItemLocator.png",
+    "demoFile": "ItemLocatorDemo.mp4",
+    "links": [
+      {
+        "name": "Github",
+        "link": "https://github.com/Chris-Kau/SDV-Item-Locator",
+        "icon": "mdi-github"
+      },
+      {
+        "name": "External",
+        "link": "https://www.nexusmods.com/stardewvalley/mods/27409",
+        "icon": "mdi-web"
+      }
+    ]
+  },
+  {
+    "name": "StickiTime",
+    "description": "A cross-platform desktop application that is overlayed on top of other applications. This features a pomodoro timer, customizable sticky notes, and a bookmarks panel.",
+    "shortDescription": "A cross-platform desktop application that is overlayed on top of other applications.",
+    "skills": ["Electron Js", "React", "Node.js", "Tailwind CSS"],
+    "extra": "",
+    "image": "StickiTime.png",
+    "demoFile": "StickiTimeDemo.mp4",
+    "links": [
+      {
+        "name": "Github",
+        "link": "https://github.com/Chris-Kau/StickiTime",
+        "icon": "mdi-github"
+      }
+    ]
+  },
+  {
+    "name": "Canvashark",
+    "description": "Full-stack web application that features a Kanban board. Allows users to import their college Canvas assignments automatically with their Canvas API. Includes custom task creation and draggable sticky notes.",
+    "shortDescription": "A Full-stack web application that features a Kanban board and integrates the Canvas API.",
+    "skills": ["Canvas LMS API", "Node.js", "React", "Vercel"],
+    "extra": "Won #1 Best UI/UX for Marina Hacks Hackathon",
+    "extraicon":"mdi-trophy",
+    "image": "Canvashark.png",
+    "demoFile": "CanvasharkDemo.mp4",
+    "links": [
+      {
+        "name": "Github",
+        "link": "https://github.com/Chris-Kau/Canvashark",
+        "icon": "mdi-github"
+      },
+              {
+        "name": "Devpost",
+        "link": "https://devpost.com/software/canvashark",
+        "icon": "mdi-alpha-d-circle"
+      },
+      {
+        "name": "External",
+        "link": "https://canvashark.vercel.app/",
+        "icon": "mdi-open-in-new"
+      }
 
-    },
-    {
-        "name": "Canvashark",
-        "description": "Full-stack web application that features a Kanban board. Allows users to import their college Canvas assignments automatically with their Canvas API. Includes custom task creation ad draggable sticky notes.",
-        "shortDescription": "A Full-stack web application that features a Kanban board and integrates the Canvas API.",
-        "skills": [
-            "Canvas LMS API",
-            "Node.js",
-            "React",
-            "Vercel"
-        ],
-        "extra": "Won #1 Best UI/UX for Marina Hacks Hackathon",
-        "image": "Canvashark.png",
-        "github": "https://github.com/Chris-Kau/Canvashark",
-        "extralink": "https://canvashark.vercel.app/",
-        "extraicon": "mdi-trophy"
-
-
-    },
-    {
-        "name": "More Sorting",
-        "description": "Allows users to sort items within containers based on extra criterias such as sorting by price, and alphabetically. Has configurable settings and persistent options with the use of the Generic Mod Config Menu API",
-        "shortDescription": "A Stardew Valley mod that Allows users to sort items within containers based on more criterias.",
-        "skills": [
-            "C#",
-            ".NET",
-            "SMAPI API"
-        ],
-        "extra": "2,000+ downloads",
-        "image": "MoreSorting.png",
-        "github": "https://github.com/Chris-Kau/sdv-more-sorting",
-        "extralink": "https://www.nexusmods.com/stardewvalley/mods/22944",
-        "extraicon": "mdi-download",
-        "demoFile": "MoreSortingDemo.mp4"
-
-    }
-
+    ]
+  },
+  {
+    "name": "More Sorting",
+    "description": "Allows users to sort items within containers based on extra criteria such as sorting by price and alphabetically. Has configurable settings and persistent options with the use of the Generic Mod Config Menu API",
+    "shortDescription": "A Stardew Valley mod that allows users to sort items within containers based on more criteria.",
+    "skills": ["C#", ".NET", "SMAPI API"],
+    "extra": "2,000+ downloads",
+    "extraicon":"mdi-download",
+    "image": "MoreSorting.png",
+    "demoFile": "MoreSortingDemo.mp4",
+    "links": [
+      {
+        "name": "Github",
+        "link": "https://github.com/Chris-Kau/sdv-more-sorting",
+        "icon": "mdi-github"
+      },
+      {
+        "name": "External",
+        "link": "https://www.nexusmods.com/stardewvalley/mods/22944",
+        "icon": "mdi-web"
+      }
+    ]
+  }
 ]
