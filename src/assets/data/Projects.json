@@ -12,6 +12,7 @@
         "image": "ItemLocator.png",
         "github": "https://github.com/Chris-Kau/SDV-Item-Locator",
         "extralink": "https://www.nexusmods.com/stardewvalley/mods/27409",
+        "extraicon": "mdi-download",
         "demoFile": "ItemLocatorDemo.mp4"
     },
     {
@@ -27,7 +28,8 @@
         "extra": "",
         "image": "StickiTime.png",
         "github": "https://github.com/Chris-Kau/StickiTime",
-        "extralink": ""
+        "extralink": "",
+        "extraicon": ""
 
     },
     {
@@ -43,7 +45,8 @@
         "extra": "Won #1 Best UI/UX for Marina Hacks Hackathon",
         "image": "Canvashark.png",
         "github": "https://github.com/Chris-Kau/Canvashark",
-        "extralink": "https://canvashark.vercel.app/"
+        "extralink": "https://canvashark.vercel.app/",
+        "extraicon": "mdi-trophy"
 
 
     },
@@ -60,6 +63,7 @@
         "image": "MoreSorting.png",
         "github": "https://github.com/Chris-Kau/sdv-more-sorting",
         "extralink": "https://www.nexusmods.com/stardewvalley/mods/22944",
+        "extraicon": "mdi-download",
         "demoFile": "MoreSortingDemo.mp4"
 
     }
