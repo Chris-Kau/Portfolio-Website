@@ -42,7 +42,7 @@ const vuetify = createVuetify({
     global:{
       style:{
         fontFamily:
-        "'Roboto Mono', monospace",
+        "'Jersey 10', sans-serif",
       }
     }
   }

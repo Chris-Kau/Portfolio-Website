@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import Navbar from './assets/Navbar.vue'
-import { ref } from 'vue'
-import Projects from '@/assets/data/Projects.json'
-import ExperienceCard from './assets/ExperienceCard.vue'
-import WorkExperienceData from '@/assets/data/WorkExperiences.json'
-import ProjectCard from './assets/ProjectCard.vue'
-import ProjectViewBox from './assets/ProjectViewBox.vue'
-import TooltipBtn from './assets/TooltipBtn.vue'
-const currentProjectView = ref({})
+import Navbar from "./assets/Navbar.vue";
+import { ref } from "vue";
+import Projects from "@/assets/data/Projects.json";
+import ExperienceCard from "./assets/ExperienceCard.vue";
+import WorkExperienceData from "@/assets/data/WorkExperiences.json";
+import ProjectCard from "./assets/ProjectCard.vue";
+import ProjectViewBox from "./assets/ProjectViewBox.vue";
+import TooltipBtn from "./assets/TooltipBtn.vue";
+const currentProjectView = ref({});
 const setProjectView = (project) => {
-  currentProjectView.value = project
-}
+  currentProjectView.value = project;
+};
 </script>
 <template>
   <v-app class="pa-0">
@@ -45,11 +45,18 @@ const setProjectView = (project) => {
                       style="color: var(--color-secondary); font-size: 18px"
                     >
                       I'm a student at California State University of Long Beach and a
-                      <span style="color: var(--color-text); background-color: var(--color-accent)">
+                      <span
+                        style="
+                          color: var(--color-text);
+                          background-color: var(--color-accent);
+                        "
+                      >
                         Part-Time SWE</span
                       >
-                      @ <a class="ahref" href="https://g2ss.com/">G2 Software Systems </a>. Being
-                      able to create software that has an impact on users is what keeps me going!
+                      @
+                      <a class="ahref" href="https://g2ss.com/">G2 Software Systems </a>.
+                      Being able to create software that has an impact on users is what
+                      keeps me going!
                     </p>
                   </div>
                   <v-container class="social-icons d-flex flex-row ga-md-7 ps-1">
@@ -62,7 +69,9 @@ const setProjectView = (project) => {
                           variant="tonal"
                         >
                           View Resume
-                          <v-icon size="20" class="ms-2 text-white"> mdi-file-document </v-icon>
+                          <v-icon size="20" class="ms-2 text-white">
+                            mdi-file-document
+                          </v-icon>
                         </v-btn>
                       </template>
                     </v-tooltip>
@@ -158,75 +167,50 @@ const setProjectView = (project) => {
                         />
                       </v-timeline-item>
                     </v-timeline>
-                    <!-- <div class="d-flex justify-end pa-0" style="transform: translateY(9.5%)">
-                      <v-badge
-                        location="center"
-                        class="present-badge pa-0 ma-0"
-                        text-color="ck-accent"
-                        color="ck-supportingaccent"
-                        content="present"
-                        height="35"
-                        width="100"
-                      >
-                      </v-badge>
-                    </div> -->
                   </div>
                 </v-container>
               </v-container>
             </section>
 
-
             <section id="projects">
               <v-container class="pa-0" max-width="100%" style="margin-bottom: 100px">
                 <p
-                  class="mono font-weight-bold  text-left"
-                  style="color: var(--color-secondary); font-size:36px"
+                  class="mono font-weight-bold text-left"
+                  style="color: var(--color-secondary); font-size: 36px"
                 >
                   <span class="d-flex align-center ga-1">
                     <v-icon size="30">mdi-star-outline</v-icon>
                     Projects
                   </span>
                 </p>
-                <v-container class="" max-width="100%">
-                  <v-row class="d-flex justify-center align-center pa-0">
-                    <v-col cols="auto">
-                      <v-container
-                        class="pa-0 d-flex"
-                        width="500"
-                        height="500"
-                        style="max-width: 500px; max-height: 500px"
-                      >
-                        <ProjectViewBox :project="currentProjectView || {}"></ProjectViewBox>
-                      </v-container>
-                    </v-col>
-                    <v-col cols="auto">
-                      <v-container
-                        class="thin-scroll d-flex flex-wrap justify-center align-center ga-5"
-                        style="
-                          overflow-y: auto;
-                          max-height: 500px;
-                          max-width: 500px;
+                <v-container class="d-flex flex-column ga-8" max-width="100%">
+                  <v-container style="max-width: 100%; height: 325px">
+                    <ProjectViewBox :project="currentProjectView || {}"></ProjectViewBox>
+                  </v-container>
+                  <v-container
+                    class="thin-scroll d-flex flex-col justify-center align-center ga-5"
+                    style="
+                      overflow-y: auto;
+                      max-height: 500px;
+                      max-width: 100%;
 
-                          border-radius: 8px;
-                          border: 1px solid var(--color-primary);
-                          background-color: transparent;
-                          box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
-                        "
-                      >
-                        <ProjectCard
-                          v-for="(item, i) in Projects"
-                          :key="i"
-                          :project="item"
-                          @click="setProjectView(item)"
-                          style="flex-shrink: 0"
-                        />
-                      </v-container>
-                    </v-col>
-                  </v-row>
+                      border-radius: 8px;
+                      border: 1px solid var(--color-primary);
+                      background-color: transparent;
+                      box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+                    "
+                  >
+                    <ProjectCard
+                      v-for="(item, i) in Projects"
+                      :key="i"
+                      :project="item"
+                      @click="setProjectView(item)"
+                      style="flex-shrink: 0"
+                    />
+                  </v-container>
                 </v-container>
               </v-container>
             </section>
-
           </v-main>
         </v-col>
 
@@ -271,7 +255,7 @@ section {
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
 }
 
 .scroll-container {
@@ -298,9 +282,7 @@ a.ahref {
   cursor: pointer;
   text-decoration-line: underline;
   text-decoration-style: dashed;
-  transition:
-    color 0.2s,
-    background-color 0.2s;
+  transition: color 0.2s, background-color 0.2s;
 }
 
 a.ahref:hover {
