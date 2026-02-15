@@ -35,17 +35,15 @@ const scrollTo = (id) => {
             contain
             alt="Oshawott logo"
           />
-          <span class="mono font-weight-semibold text-h5 text-(--color-paragraph-text)"
-            >Chris Kau</span
-          >
+          <span class="mono text-h5">Chris Kau</span>
         </div>
       </v-app-bar-title>
       <v-btn
         v-for="item in navItems"
         :key="item.id"
         @click="scrollTo(item.id)"
-        class="font-weight-regular"
         color="ck-accent"
+        class="sans text-h6"
       >
         {{ item.label }}
       </v-btn>

@@ -14,9 +14,7 @@ const dims = 200;
     class="project-card pa-0 ga-0"
     style="aspect-ratio: 1/1"
   >
-    <div
-      class="d-flex text-center card-darken justify-center align-center mono font-weight-black pa-3"
-    >
+    <div class="d-flex text-center card-darken justify-center align-center mono pa-3">
       {{ project.shortDescription }}
     </div>
     <v-img
@@ -75,5 +73,4 @@ const dims = 200;
 .skill-chip :deep(.v-chip__content) {
   color: var(--color-supportingaccent);
 }
-
 </style>

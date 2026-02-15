@@ -49,10 +49,16 @@ const copyEmail = async () => {
 
         <v-col cols="8">
           <v-main style="padding: 0 24px; margin: 0 auto">
+            <!-- 
+          About me Section 
+          -->
             <section id="about">
-              <v-container class="d-flex align-center pb-10">
-                <div class="sans flex-1" style="max-width: 600px">
-                  <div>
+              <v-container
+                class="d-flex justify-space-between pr-0 align-center pb-10"
+                style="width: 85%"
+              >
+                <div class="sans flex-1">
+                  <div class="pr">
                     <p
                       class="sans ml-1"
                       style="
@@ -62,7 +68,7 @@ const copyEmail = async () => {
                         font-size: 18px;
                       "
                     >
-                      Software Engineer
+                      Software Engineer | Based in California
                     </p>
                     <p class="sans font-weight-semibold" style="font-size: 36px">
                       <span style="color: var(--color-secondary)">Hello, I'm </span>
@@ -72,7 +78,11 @@ const copyEmail = async () => {
                       class="sans pt-2 max-w-130"
                       style="color: var(--color-secondary); font-size: 18px"
                     >
-                      I'm a student at California State University of Long Beach and a
+                      I'm a student at
+                      <a class="ahref" href="https://www.csulb.edu/" target="_blank"
+                        >CSULB</a
+                      >
+                      and a
                       <span
                         style="
                           color: var(--color-text);
@@ -82,8 +92,9 @@ const copyEmail = async () => {
                         Part-Time SWE</span
                       >
                       @
-                      <a class="ahref" href="https://g2ss.com/">G2 Software Systems </a>.
-                      Being able to create software that has an impact on users is what
+                      <a class="ahref" href="https://g2ss.com/" target="_blank"
+                        >G2 Software Systems </a
+                      >. Being able to create software that has an impact on users is what
                       keeps me going!
                     </p>
                   </div>
@@ -131,24 +142,18 @@ const copyEmail = async () => {
                     </span>
                   </v-container>
                 </div>
-                <div class="image-wrapper">
+                <div class="d-flex pl-10 flex-shrink-0" style="width: fit-content">
                   <img
-                    src="./assets/images/oshawott shadow.png"
-                    class="shadow-overlay mt-7 ml-6"
-                    alt=""
-                    aria-hidden="true"
-                    style="width: 100%"
-                  />
-                  <img
-                    src="./assets/images/about oshawott.png"
-                    class="main-img"
-                    alt="Oshawott illustration"
-                    style="width: 100%"
+                    src="./assets/images/oshawott logo.png"
+                    alt="oshawott logo"
+                    style="width: 250px; height: auto"
                   />
                 </div>
               </v-container>
             </section>
-
+            <!-- 
+          Experience Section 
+          -->
             <section id="experience">
               <v-container class="pa-0 pb-10">
                 <p
@@ -162,7 +167,7 @@ const copyEmail = async () => {
                   <v-divider thickness="3" opacity="100"></v-divider>
                 </p>
                 <v-container
-                  class="d-flex flex-row align-center justify-center pa-0"
+                  class="d-flex flex-row align-center justify-center pa-0 pt-5"
                   style="max-width: 100%; width: 100%"
                 >
                   <div
@@ -177,7 +182,7 @@ const copyEmail = async () => {
                   >
                     <v-timeline
                       align="start"
-                      side="end"
+                      side="start"
                       direction="horizontal"
                       line-color="ck-supportingaccent"
                     >
@@ -204,7 +209,9 @@ const copyEmail = async () => {
                 </v-container>
               </v-container>
             </section>
-
+            <!-- 
+          Projects Section 
+          -->
             <section id="projects">
               <v-container class="pa-0" max-width="100%" style="margin-bottom: 100px">
                 <p
@@ -228,7 +235,6 @@ const copyEmail = async () => {
                       max-height: 500px;
                       max-width: 100%;
 
-                      border-radius: 8px;
                       border: 1px solid var(--color-primary);
                       background-color: transparent;
                       box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);

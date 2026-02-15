@@ -148,7 +148,6 @@ import ProjectTooltipBtn from "./ProjectTooltipBtn.vue";
       height: 100%;
       width: 100%;
       overflow: hidden;
-      border-radius: 8px;
       border: 1px solid var(--color-primary);
       box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
       gap: 0;
@@ -162,7 +161,9 @@ import ProjectTooltipBtn from "./ProjectTooltipBtn.vue";
       <span class="sans text-h3" style="color: var(--color-primary)">
         Please Select a Project
       </span>
-      <v-icon size="100" style="color: var(--color-text)"> mdi-arrow-down-bold </v-icon>
+      <v-icon size="100" style="padding-top: 50px; color: var(--color-text)">
+        mdi-arrow-down-bold
+      </v-icon>
     </v-container>
   </v-container>
 </template>

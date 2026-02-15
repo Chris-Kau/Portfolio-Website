@@ -8,18 +8,21 @@ defineProps(["company", "date", "role", "description", "skills"]);
     width="400"
     append-icon="mdi-open-in-new"
     flat
-    style="color:white; background-color:transparent; box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15)"
-
+    style="
+      color: white;
+      background-color: transparent;
+      box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+    "
   >
     <!-- Title + Subtitle -->
     <template #title>
-      <span class="mono font-weight-black">
+      <span class="mono text-h5">
         {{ company }}
       </span>
     </template>
 
     <template #subtitle>
-      {{ role }} • {{ date }}
+      <span class="sans" style="font-size: 16px">{{ role }} • {{ date }}</span>
     </template>
 
     <!-- Description -->
@@ -30,7 +33,7 @@ defineProps(["company", "date", "role", "description", "skills"]);
       {{ description }}
     </v-container>
 
-    <v-divider style="color: var(--color-secondary)"/>
+    <v-divider style="color: var(--color-secondary)" />
 
     <!-- Skills -->
     <v-container
@@ -70,12 +73,12 @@ defineProps(["company", "date", "role", "description", "skills"]);
   color: var(--color-supportingaccent);
 }
 
-.vcardhover{
-  border-radius: 8px; 
+.vcardhover {
+  border-radius: 8px;
   border: 1px solid var(--color-primary);
   transition: border 0.2s;
 }
-.vcardhover:hover{
+.vcardhover:hover {
   border: 1px solid var(--color-secondary);
 }
 </style>
