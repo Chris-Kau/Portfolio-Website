@@ -11,10 +11,38 @@ const currentProjectView = ref({});
 const setProjectView = (project) => {
   currentProjectView.value = project;
 };
+const snackbar = ref(false);
+const snackbarTimeout = ref(1500);
+const swapEmailIcon = ref(false);
+const copyEmail = async () => {
+  await navigator.clipboard.writeText("chriskau04@gmail.com");
+  if (swapEmailIcon.value === false) {
+    swapEmailIcon.value = true;
+    snackbar.value = true;
+    setTimeout(() => {
+      swapEmailIcon.value = false;
+    }, 1000);
+  }
+};
 </script>
 <template>
   <v-app class="pa-0">
     <Navbar />
+    <v-snackbar
+      v-model="snackbar"
+      :timeout="snackbarTimeout"
+      location="top"
+      color="secondary"
+      variant="flat"
+      content-class="d-flex justify-center text-center"
+    >
+      <span class="sans" style="color: white; font-size: 20px">
+        Copied to Clipboard
+      </span>
+      <template v-slot:actions>
+        <v-icon color="green" size="30">mdi-check-bold</v-icon>
+      </template>
+    </v-snackbar>
     <div class="scroll-container pt-0 pb-0">
       <v-row no-gutters class="d-flex">
         <v-col cols="2"> </v-col>
@@ -90,13 +118,17 @@ const setProjectView = (project) => {
                       icon="mdi-linkedin"
                       size="50"
                     />
-                    <TooltipBtn
-                      text="chriskau04@gmail.com"
-                      location="bottom"
-                      link="mailto:chriskau04@gmail.com?subject=Portfolio%20Contact"
-                      icon="mdi-email"
-                      size="50"
-                    />
+                    <span @click="copyEmail">
+                      <TooltipBtn
+                        text="chriskau04@gmail.com"
+                        location="bottom"
+                        link=""
+                        :icon="
+                          !swapEmailIcon ? 'mdi-email' : 'mdi-clipboard-check-outline'
+                        "
+                        size="50"
+                      />
+                    </span>
                   </v-container>
                 </div>
                 <div class="image-wrapper">
@@ -127,6 +159,7 @@ const setProjectView = (project) => {
                     <v-icon size="25">mdi-desktop-classic</v-icon>
                     Work Experience
                   </span>
+                  <v-divider thickness="3" opacity="100"></v-divider>
                 </p>
                 <v-container
                   class="d-flex flex-row align-center justify-center pa-0"
@@ -182,6 +215,7 @@ const setProjectView = (project) => {
                     <v-icon size="30">mdi-star-outline</v-icon>
                     Projects
                   </span>
+                  <v-divider thickness="3" opacity="100"></v-divider>
                 </p>
                 <v-container class="d-flex flex-column ga-8" max-width="100%">
                   <v-container style="max-width: 100%; height: 325px">
