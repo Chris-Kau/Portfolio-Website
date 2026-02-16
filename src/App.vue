@@ -160,8 +160,8 @@ const copyEmail = async () => {
             <section id="experience">
               <v-container class="pa-0 pb-10">
                 <p
-                  class="mono font-weight-black text-left"
-                  style="color: var(--color-secondary); font-size: 36px"
+                  class="mono text-left"
+                  style="color: var(--color-secondary); font-size: 48px"
                 >
                   <span class="d-flex align-center ga-3">
                     <v-icon class="hn" size="25">hn-business</v-icon>
@@ -218,8 +218,8 @@ const copyEmail = async () => {
             <section id="projects">
               <v-container class="pa-0" max-width="100%" style="margin-bottom: 100px">
                 <p
-                  class="mono font-weight-bold text-left"
-                  style="color: var(--color-secondary); font-size: 36px"
+                  class="mono text-left"
+                  style="color: var(--color-secondary); font-size: 48px"
                 >
                   <span class="d-flex align-center ga-3">
                     <v-icon class="hn" size="25">hn-sparkles-solid</v-icon>
