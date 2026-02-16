@@ -76,7 +76,7 @@ const copyEmail = async () => {
                         font-size: 18px;
                       "
                     >
-                      Software Engineer | Based in California
+                      Software Engineer | Based in California testing123
                     </p>
                     <p class="mono" style="font-size: 36px">
                       <span style="color: var(--color-secondary)">Hello, I'm </span>
