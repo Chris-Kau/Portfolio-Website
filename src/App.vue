@@ -111,7 +111,7 @@ const copyEmail = async () => {
                           height="50"
                           class="resume-btn text-white"
                           variant="tonal"
-                          href="./Resume.pdf"
+                          href="./PortfolioResume.pdf"
                           target="_blank"
                         >
                           View Resume
