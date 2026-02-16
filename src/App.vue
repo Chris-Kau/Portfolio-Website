@@ -87,7 +87,7 @@ const copyEmail = async () => {
                       <a class="ahref" href="https://www.csulb.edu/" target="_blank">CSULB</a>
                       and a
                       <span style="color: var(--color-text); background-color: var(--color-accent)">
-                        Part-Time SWE</span
+                        Full-Stack SWE</span
                       >
                       @
                       <a class="ahref" href="https://g2ss.com/" target="_blank"
@@ -161,8 +161,8 @@ const copyEmail = async () => {
                   class="mono font-weight-black text-left"
                   style="color: var(--color-secondary); font-size: 36px"
                 >
-                  <span class="d-flex align-center ga-2">
-                    <v-icon size="25">mdi-desktop-classic</v-icon>
+                  <span class="d-flex align-center ga-3">
+                    <v-icon class="hn" size="25">hn-business</v-icon>
                     Work Experience
                   </span>
                   <v-divider thickness="3" opacity="100"></v-divider>
@@ -219,8 +219,8 @@ const copyEmail = async () => {
                   class="mono font-weight-bold text-left"
                   style="color: var(--color-secondary); font-size: 36px"
                 >
-                  <span class="d-flex align-center ga-1">
-                    <v-icon size="30">mdi-star-outline</v-icon>
+                  <span class="d-flex align-center ga-3">
+                    <v-icon class="hn" size="25">hn-sparkles-solid</v-icon>
                     Projects
                   </span>
                   <v-divider thickness="3" opacity="100"></v-divider>

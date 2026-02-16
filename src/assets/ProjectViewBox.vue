@@ -129,7 +129,7 @@ import ProjectTooltipBtn from "./ProjectTooltipBtn.vue";
   <!-- EMPTY STATE -->
   <v-container
   v-else
-    class="d-flex flex-row pa-0 ma-0 projectBox"
+    class="d-flex flex-row pa-0 ma-0"
     fluid
   >
     <v-container
@@ -139,8 +139,8 @@ import ProjectTooltipBtn from "./ProjectTooltipBtn.vue";
       <span class="sans text-h3" style="color: var(--color-primary)">
         Please Select a Project
       </span>
-      <v-icon size="100" style="padding-top: 50px; color: var(--color-text)">
-        mdi-arrow-down-bold
+      <v-icon class="hn" size="50" style="padding-top: 50px; color: var(--color-text)">
+        hn-arrow-circle-down-solid
       </v-icon>
     </v-container>
   </v-container>
