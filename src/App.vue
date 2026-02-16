@@ -76,7 +76,7 @@ const copyEmail = async () => {
                         font-size: 18px;
                       "
                     >
-                      Software Engineer | Based in California testing123
+                      Software Engineer | Based in California
                     </p>
                     <p class="mono" style="font-size: 36px">
                       <span style="color: var(--color-secondary)">Hello, I'm </span>
@@ -111,6 +111,8 @@ const copyEmail = async () => {
                           height="50"
                           class="resume-btn text-white"
                           variant="tonal"
+                          href="./Resume.pdf"
+                          target="_blank"
                         >
                           View Resume
                           <v-icon size="20" class="ms-2 hn text-white"> hn-writing </v-icon>
