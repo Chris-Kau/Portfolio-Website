@@ -4,20 +4,20 @@
     "description": "Allows users to search for containers that contain a specific item. Using Breadth-First-Search, this mod will find the shortest path to the correct container, and draw the path onto the player's screen",
     "shortDescription": "A Stardew Valley mod that allows users to search for containers that hold a specific item.",
     "skills": ["C#", ".NET", "SMAPI API"],
-    "extra": "2,000+ downloads",
-    "extraicon":"mdi-download",
+    "extra": "2,300+ downloads",
+    "extraicon":"hn-download",
     "image": "ItemLocator.png",
     "demoFile": "ItemLocatorDemo.mp4",
     "links": [
       {
         "name": "Github",
         "link": "https://github.com/Chris-Kau/SDV-Item-Locator",
-        "icon": "mdi-github"
+        "icon": "hn-github"
       },
       {
         "name": "External",
         "link": "https://www.nexusmods.com/stardewvalley/mods/27409",
-        "icon": "mdi-web"
+        "icon": "hn-link"
       }
     ]
   },
@@ -33,7 +33,7 @@
       {
         "name": "Github",
         "link": "https://github.com/Chris-Kau/StickiTime",
-        "icon": "mdi-github"
+        "icon": "hn-github"
       }
     ]
   },
@@ -43,24 +43,24 @@
     "shortDescription": "A Full-stack web application that features a Kanban board and integrates the Canvas API.",
     "skills": ["Canvas LMS API", "Node.js", "React", "Vercel"],
     "extra": "Won #1 Best UI/UX for Marina Hacks Hackathon",
-    "extraicon":"mdi-trophy",
+    "extraicon":"hn-trophy",
     "image": "Canvashark.png",
     "demoFile": "CanvasharkDemo.mp4",
     "links": [
       {
         "name": "Github",
         "link": "https://github.com/Chris-Kau/Canvashark",
-        "icon": "mdi-github"
+        "icon": "hn-github"
       },
               {
         "name": "Devpost",
         "link": "https://devpost.com/software/canvashark",
-        "icon": "mdi-alpha-d-circle"
+        "icon": "hn-trophy-solid"
       },
       {
         "name": "External",
         "link": "https://canvashark.vercel.app/",
-        "icon": "mdi-open-in-new"
+        "icon": "hn-link"
       }
 
     ]
@@ -71,19 +71,19 @@
     "shortDescription": "A Stardew Valley mod that allows users to sort items within containers based on more criteria.",
     "skills": ["C#", ".NET", "SMAPI API"],
     "extra": "2,000+ downloads",
-    "extraicon":"mdi-download",
+    "extraicon":"hn-download",
     "image": "MoreSorting.png",
     "demoFile": "MoreSortingDemo.mp4",
     "links": [
       {
         "name": "Github",
         "link": "https://github.com/Chris-Kau/sdv-more-sorting",
-        "icon": "mdi-github"
+        "icon": "hn-github"
       },
       {
         "name": "External",
         "link": "https://www.nexusmods.com/stardewvalley/mods/22944",
-        "icon": "mdi-web"
+        "icon": "hn-link"
       }
     ]
   }

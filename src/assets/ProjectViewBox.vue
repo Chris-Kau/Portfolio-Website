@@ -4,25 +4,17 @@ import ProjectTooltipBtn from "./ProjectTooltipBtn.vue";
 </script>
 
 <template>
-  <v-container
-    v-if="project.name"
-    class="d-flex flex-row pa-0 ma-0"
-    fluid
-    style="
-      height: 100%;
-      width: 100%;
-      overflow: hidden;
-      border: 1px solid var(--color-primary);
-      box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
-      gap: 0;
-    "
-  >
+<v-container
+  v-if="project.name"
+  class="d-flex flex-row pa-0 ma-0 projectBox"
+  fluid
+>
     <!-- LEFT SIDE (40%) -->
     <div
-      class="d-flex flex-column"
+      class="d-flex flex-column left"
       style="
-        width: 40%;
-        flex: 0 0 40%;
+        width: 50%;
+        flex: 0 0 50%;
         min-width: 0;
         min-height: 0;
         height: 100%;
@@ -48,7 +40,7 @@ import ProjectTooltipBtn from "./ProjectTooltipBtn.vue";
             style="flex: 0 0 auto; background-color: var(--color-secondary)"
           >
             <v-container class="d-flex flex-row align-center pa-0">
-              <v-card-text class="mono text-h5 font-weight-black pt-0 pb-0 ma-0">
+              <v-card-text class="mono text-h5 pt-0 pb-0 ma-0">
                 {{ project.name }}
               </v-card-text>
 
@@ -73,8 +65,8 @@ import ProjectTooltipBtn from "./ProjectTooltipBtn.vue";
             style="flex: 0 0 auto; background-color: var(--color-secondary)"
           >
             <template v-slot:subtitle>
-              <v-icon size="20">{{ project.extraicon }}</v-icon>
-              <span class="pl-2">{{ project.extra }}</span>
+              <v-icon class="hn" size="20">{{ project.extraicon }}</v-icon>
+              <span class="sans pl-2" style="font-size:18px">{{ project.extra }}</span>
             </template>
           </v-card-item>
 
@@ -82,7 +74,7 @@ import ProjectTooltipBtn from "./ProjectTooltipBtn.vue";
 
           <!-- Description -->
           <div class="thin-scroll pt-1" style="flex: 1; min-height: 0; overflow-y: auto">
-            <v-card-text class="sans pt-0 pb-1">
+            <v-card-text class="sans pt-0 pb-1" style="font-size:18px">
               {{ project.description }}
             </v-card-text>
           </div>
@@ -106,19 +98,20 @@ import ProjectTooltipBtn from "./ProjectTooltipBtn.vue";
             v-for="skill in project.skills"
             :key="skill"
             class="sans skill-chip opacity-90"
-            style="flex-shrink: 0"
+            style="flex-shrink: 0; font-size:18px"
             color="ck-accent"
             text-color="ck-supportingaccent"
             variant="flat"
             label
+            
           >
             {{ skill }}
           </v-chip>
         </v-container>
       </v-card>
     </div>
-
-    <div style="flex: 1; min-width: 0; height: 100%; display: flex">
+    <!-- RIGHT SIDE -->
+    <div class="right">
       <video
         :key="project.demoFile"
         :src="`./${project.demoFile}`"
@@ -128,31 +121,16 @@ import ProjectTooltipBtn from "./ProjectTooltipBtn.vue";
         controls
         playsinline
         preload="metadata"
-        style="
-          width: 100%;
-          height: 100%;
-          display: block;
-          object-fit: cover;
-          aspect-ratio: 1/1;
-        "
+        class="vid"
       />
     </div>
   </v-container>
 
   <!-- EMPTY STATE -->
   <v-container
-    v-else
-    class="d-flex flex-row pa-0 ma-0"
+  v-else
+    class="d-flex flex-row pa-0 ma-0 projectBox"
     fluid
-    style="
-      height: 100%;
-      width: 100%;
-      overflow: hidden;
-      border: 1px solid var(--color-primary);
-      box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
-      gap: 0;
-      background-color: var(--color-secondary);
-    "
   >
     <v-container
       class="d-flex flex-column justify-center align-center text-center"
@@ -177,5 +155,36 @@ import ProjectTooltipBtn from "./ProjectTooltipBtn.vue";
 }
 .thin-scroll::-webkit-scrollbar {
   height: 4px;
+}
+.right {
+  flex: 1;
+  min-width: 0;
+  height: auto;
+  aspect-ratio: 16 / 9;
+
+  display: flex;
+}
+
+.vid {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+.left {
+  width: 40%;
+  flex: 0 0 40%;
+  min-width: 0;
+  min-height: 0;
+  border-right: 1px solid var(--color-primary);
+  align-self: stretch;
+}
+.projectBox {
+  width: 100%;
+  height: auto;
+  align-items: stretch;
+  overflow: hidden;
+  border: 1px solid var(--color-primary);
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
 }
 </style>

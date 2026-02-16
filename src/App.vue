@@ -1,29 +1,29 @@
 <script setup lang="ts">
-import Navbar from "./assets/Navbar.vue";
-import { ref } from "vue";
-import Projects from "@/assets/data/Projects.json";
-import ExperienceCard from "./assets/ExperienceCard.vue";
-import WorkExperienceData from "@/assets/data/WorkExperiences.json";
-import ProjectCard from "./assets/ProjectCard.vue";
-import ProjectViewBox from "./assets/ProjectViewBox.vue";
-import TooltipBtn from "./assets/TooltipBtn.vue";
-const currentProjectView = ref({});
+import Navbar from './assets/Navbar.vue'
+import { ref } from 'vue'
+import Projects from '@/assets/data/Projects.json'
+import ExperienceCard from './assets/ExperienceCard.vue'
+import WorkExperienceData from '@/assets/data/WorkExperiences.json'
+import ProjectCard from './assets/ProjectCard.vue'
+import ProjectViewBox from './assets/ProjectViewBox.vue'
+import TooltipBtn from './assets/TooltipBtn.vue'
+const currentProjectView = ref({})
 const setProjectView = (project) => {
-  currentProjectView.value = project;
-};
-const snackbar = ref(false);
-const snackbarTimeout = ref(1500);
-const swapEmailIcon = ref(false);
+  currentProjectView.value = project
+}
+const snackbar = ref(false)
+const snackbarTimeout = ref(1500)
+const swapEmailIcon = ref(false)
 const copyEmail = async () => {
-  await navigator.clipboard.writeText("chriskau04@gmail.com");
+  await navigator.clipboard.writeText('chriskau04@gmail.com')
   if (swapEmailIcon.value === false) {
-    swapEmailIcon.value = true;
-    snackbar.value = true;
+    swapEmailIcon.value = true
+    snackbar.value = true
     setTimeout(() => {
-      swapEmailIcon.value = false;
-    }, 1000);
+      swapEmailIcon.value = false
+    }, 1000)
   }
-};
+}
 </script>
 <template>
   <v-app class="pa-0">
@@ -36,16 +36,24 @@ const copyEmail = async () => {
       variant="flat"
       content-class="d-flex justify-center text-center"
     >
-      <span class="sans" style="color: white; font-size: 20px">
-        Copied to Clipboard
-      </span>
+      <span class="sans" style="color: white; font-size: 20px"> Copied to Clipboard </span>
       <template v-slot:actions>
         <v-icon color="green" size="30">mdi-check-bold</v-icon>
       </template>
     </v-snackbar>
     <div class="scroll-container pt-0 pb-0">
       <v-row no-gutters class="d-flex">
-        <v-col cols="2"> </v-col>
+        <v-col cols="2" class="side-column">
+          <div class="scalchop-wrapper">
+            <img
+              v-for="n in 6"
+              :key="n"
+              src="./assets/images/pixel scalchop thicker.png"
+              class="scalchop"
+              alt="pixel scalchop"
+            />
+          </div>
+        </v-col>
 
         <v-col cols="8">
           <v-main style="padding: 0 24px; margin: 0 auto">
@@ -55,9 +63,9 @@ const copyEmail = async () => {
             <section id="about">
               <v-container
                 class="d-flex justify-space-between pr-0 align-center pb-10"
-                style="width: 85%"
+                style="width: 70%"
               >
-                <div class="sans flex-1">
+                <div class="sans flex-1" style="max-width: 500px">
                   <div class="pr">
                     <p
                       class="sans ml-1"
@@ -70,36 +78,33 @@ const copyEmail = async () => {
                     >
                       Software Engineer | Based in California
                     </p>
-                    <p class="sans font-weight-semibold" style="font-size: 36px">
+                    <p class="mono" style="font-size: 36px">
                       <span style="color: var(--color-secondary)">Hello, I'm </span>
                       <span style="color: var(--color-text)">Chris Kau</span>
                     </p>
-                    <p
-                      class="sans pt-2 max-w-130"
-                      style="color: var(--color-secondary); font-size: 18px"
-                    >
+                    <p class="sans" style="color: var(--color-secondary); font-size: 18px">
                       I'm a student at
-                      <a class="ahref" href="https://www.csulb.edu/" target="_blank"
-                        >CSULB</a
-                      >
+                      <a class="ahref" href="https://www.csulb.edu/" target="_blank">CSULB</a>
                       and a
-                      <span
-                        style="
-                          color: var(--color-text);
-                          background-color: var(--color-accent);
-                        "
-                      >
+                      <span style="color: var(--color-text); background-color: var(--color-accent)">
                         Part-Time SWE</span
                       >
                       @
                       <a class="ahref" href="https://g2ss.com/" target="_blank"
                         >G2 Software Systems </a
-                      >. Being able to create software that has an impact on users is what
-                      keeps me going!
+                      >. Being able to create software that has an impact on users is what keeps me
+                      going!
                     </p>
                   </div>
                   <v-container class="social-icons d-flex flex-row ga-md-7 ps-1">
-                    <v-tooltip class="pa-0" location="bottom" text="Resume">
+                    <v-tooltip
+                      class="sans pa-0"
+                      location="bottom"
+                      text="Resume"
+                      content-class="custom-tooltip"
+                      :transition="false"
+                      close-delay="0"
+                    >
                       <template v-slot:activator="{ props }">
                         <v-btn
                           v-bind="props"
@@ -108,9 +113,7 @@ const copyEmail = async () => {
                           variant="tonal"
                         >
                           View Resume
-                          <v-icon size="20" class="ms-2 text-white">
-                            mdi-file-document
-                          </v-icon>
+                          <v-icon size="20" class="ms-2 hn text-white"> hn-writing </v-icon>
                         </v-btn>
                       </template>
                     </v-tooltip>
@@ -119,14 +122,14 @@ const copyEmail = async () => {
                       text="Github"
                       location="bottom"
                       link="https://github.com/Chris-Kau"
-                      icon="mdi-github"
+                      icon="hn-github"
                       size="50"
                     />
                     <TooltipBtn
                       text="LinkedIn"
                       location="bottom"
                       link="https://www.linkedin.com/in/chris-kau/"
-                      icon="mdi-linkedin"
+                      icon="hn-linkedin"
                       size="50"
                     />
                     <span @click="copyEmail">
@@ -134,9 +137,7 @@ const copyEmail = async () => {
                         text="chriskau04@gmail.com"
                         location="bottom"
                         link=""
-                        :icon="
-                          !swapEmailIcon ? 'mdi-email' : 'mdi-clipboard-check-outline'
-                        "
+                        :icon="!swapEmailIcon ? 'hn-envelope-solid' : 'hn-clipboard-solid'"
                         size="50"
                       />
                     </span>
@@ -195,13 +196,13 @@ const copyEmail = async () => {
                         dot-color="ck-accent"
                       >
                         <ExperienceCard
-                          :href="item.link"
                           target="_blank"
                           :company="item.company"
                           :role="item.role"
                           :date="item.date"
                           :description="item.description"
                           :skills="item.skills"
+                          :link="item.link"
                         />
                       </v-timeline-item>
                     </v-timeline>
@@ -225,7 +226,7 @@ const copyEmail = async () => {
                   <v-divider thickness="3" opacity="100"></v-divider>
                 </p>
                 <v-container class="d-flex flex-column ga-8" max-width="100%">
-                  <v-container style="max-width: 100%; height: 325px">
+                  <v-container class="d-flex justify-center" style="max-width: 90%">
                     <ProjectViewBox :project="currentProjectView || {}"></ProjectViewBox>
                   </v-container>
                   <v-container
@@ -234,7 +235,7 @@ const copyEmail = async () => {
                       overflow-y: auto;
                       max-height: 500px;
                       max-width: 100%;
-
+                      width: fit-content;
                       border: 1px solid var(--color-primary);
                       background-color: transparent;
                       box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
@@ -254,7 +255,17 @@ const copyEmail = async () => {
           </v-main>
         </v-col>
 
-        <v-col cols="2"> </v-col>
+                <v-col cols="2" class="side-column">
+          <div class="scalchop-wrapper">
+            <img
+              v-for="n in 6"
+              :key="n"
+              src="./assets/images/pixel scalchop thicker.png"
+              class="scalchop"
+              alt="pixel scalchop"
+            />
+          </div>
+        </v-col>
       </v-row>
     </div>
   </v-app>
@@ -295,7 +306,7 @@ section {
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  font-family: "Roboto Mono", monospace;
+  font-family: 'Roboto Mono', monospace;
 }
 
 .scroll-container {
@@ -322,7 +333,9 @@ a.ahref {
   cursor: pointer;
   text-decoration-line: underline;
   text-decoration-style: dashed;
-  transition: color 0.2s, background-color 0.2s;
+  transition:
+    color 0.2s,
+    background-color 0.2s;
 }
 
 a.ahref:hover {
@@ -336,5 +349,33 @@ a.ahref:hover {
 }
 .thin-scroll::-webkit-scrollbar {
   height: 4px;
+}
+:deep(.custom-tooltip) {
+  font-size: 18px !important;
+  letter-spacing: 1px !important;
+  border-radius: 0 !important;
+}
+.custom-square-dot {
+  width: 14px;
+  height: 14px;
+  background: var(--color-accent);
+}
+.side-column {
+  display: flex;
+  justify-content: center;
+}
+
+.scalchop-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* 1 per row, evenly spaced */
+  height: 100%;
+  padding: 40px 0; /* optional top/bottom spacing */
+}
+
+.scalchop {
+  width: 70px;          /* adjust size */
+  height: auto;
+  image-rendering: pixelated;
 }
 </style>

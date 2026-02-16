@@ -33,3 +33,7 @@ html, body, #app {
   font-weight: 400;
   font-style: normal;
 }
+
+:deep(.custom-tooltip) {
+  font-size: 18px !important;
+}
