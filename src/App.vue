@@ -43,7 +43,7 @@ const copyEmail = async () => {
     </v-snackbar>
     <div class="scroll-container pt-0 pb-0">
       <v-row no-gutters class="d-flex">
-        <v-col cols="2" class="side-column">
+        <v-col cols="2" class="side-column d-none d-md-flex">
           <div class="scalchop-wrapper">
             <img
               v-for="n in 6"
@@ -55,15 +55,14 @@ const copyEmail = async () => {
           </div>
         </v-col>
 
-        <v-col cols="8">
+        <v-col cols="12" md="8">
           <v-main style="padding: 0 24px; margin: 0 auto">
             <!-- 
           About me Section 
           -->
             <section id="about">
               <v-container
-                class="d-flex justify-space-between pr-0 align-center pb-10"
-                style="width: 70%"
+                class="d-flex justify-space-between pr-0 align-center pb-10 w-100 w-md-70"
               >
                 <div class="sans flex-1" style="max-width: 500px">
                   <div class="pr">
@@ -158,11 +157,8 @@ const copyEmail = async () => {
           Experience Section 
           -->
             <section id="experience">
-              <v-container class="pa-0 pb-10">
-                <p
-                  class="mono text-left"
-                  style="color: var(--color-secondary); font-size: 48px"
-                >
+              <v-container class="pa-0 pb-10" max-width="100%">
+                <p class="mono text-left" style="color: var(--color-secondary); font-size: 48px">
                   <span class="d-flex align-center ga-3">
                     <v-icon class="hn" size="25">hn-business</v-icon>
                     Work Experience
@@ -217,10 +213,7 @@ const copyEmail = async () => {
           -->
             <section id="projects">
               <v-container class="pa-0" max-width="100%" style="margin-bottom: 100px">
-                <p
-                  class="mono text-left"
-                  style="color: var(--color-secondary); font-size: 48px"
-                >
+                <p class="mono text-left" style="color: var(--color-secondary); font-size: 48px">
                   <span class="d-flex align-center ga-3">
                     <v-icon class="hn" size="25">hn-sparkles-solid</v-icon>
                     Projects
@@ -257,7 +250,7 @@ const copyEmail = async () => {
           </v-main>
         </v-col>
 
-                <v-col cols="2" class="side-column">
+        <v-col cols="2" class="side-column d-none d-md-flex">
           <div class="scalchop-wrapper">
             <img
               v-for="n in 6"
@@ -376,8 +369,12 @@ a.ahref:hover {
 }
 
 .scalchop {
-  width: 70px;          /* adjust size */
+  width: 70px; /* adjust size */
   height: auto;
   image-rendering: pixelated;
+}
+.w-md-70 { width: 70%; }
+@media (max-width: 959px) { /* < md */
+  .w-md-70 { width: 100%; }
 }
 </style>
