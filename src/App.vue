@@ -40,7 +40,7 @@ onMounted(() => {
 
 </script>
 <template>
-  <v-app class="pa-0">
+  <v-app class="pa-0 pb-0 mb-0">
     <Navbar />
     <v-snackbar
       v-model="snackbar"
@@ -72,7 +72,7 @@ onMounted(() => {
         </v-col>
 
         <v-col cols="12" md="8">
-          <v-main style="padding: 0 24px; margin: 0 auto">
+          <v-main style="padding-bottom:0px; margin: 0 auto">
             <!-- 
           About me Section 
           -->
@@ -332,7 +332,7 @@ section {
 }
 
 .scroll-container {
-  height: calc(100vh - 85px);
+  height: calc(100vh - 60px);
   margin-top: 60px;
   overflow-y: auto;
   overflow-x: hidden;
