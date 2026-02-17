@@ -196,7 +196,7 @@ onMounted(() => {
                 </v-container>
               </v-slide-x-transition>
               <!-- Current Tech Stack -->
-              <v-container class="pa-0">
+              <v-container class="pa-0 pb-5">
                 <span
                   class="mono d-flex align-center ga-3"
                   style="color: var(--color-secondary); font-size: 48px"
@@ -206,8 +206,8 @@ onMounted(() => {
                 </span>
                 <v-divider thickness="3" opacity="100"></v-divider>
                 <v-container
-                  class="thin-scroll d-flex flex-row ga-4 pa-0 pt-5"
-                  style="overflow-x: auto"
+                  class="thin-scroll d-flex flex-wrap flex-row ga-4 pa-0 pt-5"
+                  style="width: 100%"
                 >
                   <SkillCard
                     v-for="(item, i) in CurrentTechStack"
