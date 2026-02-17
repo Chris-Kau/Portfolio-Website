@@ -5,10 +5,12 @@ import { useDisplay } from "vuetify";
 import Projects from "@/assets/data/Projects.json";
 import ExperienceCard from "./assets/ExperienceCard.vue";
 import WorkExperienceData from "@/assets/data/WorkExperiences.json";
+import CurrentTechStack from "./assets/data/CurrentTechStack.json";
 import ProjectCard from "./assets/ProjectCard.vue";
 import ProjectViewBox from "./assets/ProjectViewBox.vue";
 import TooltipBtn from "./assets/TooltipBtn.vue";
 import ProjectViewBoxMobile from "./assets/ProjectViewBoxMobile.vue";
+import SkillCard from "./assets/SkillCard.vue";
 const { mdAndUp } = useDisplay();
 const currentProjectView = ref({});
 const setProjectView = (project) => {
@@ -125,7 +127,9 @@ onMounted(() => {
                         what keeps me going!
                       </p>
                     </div>
-                    <v-container class="social-icons d-flex flex-row ga-md-7 ps-1">
+                    <v-container
+                      class="social-icons d-flex flex-row ga-md-7 ga-sm-3 ps-1"
+                    >
                       <v-tooltip
                         class="sans pa-0"
                         location="bottom"
@@ -191,6 +195,27 @@ onMounted(() => {
                   </div>
                 </v-container>
               </v-slide-x-transition>
+              <!-- Current Tech Stack -->
+              <v-container class="pa-0">
+                <span
+                  class="mono d-flex align-center ga-3"
+                  style="color: var(--color-secondary); font-size: 48px"
+                >
+                  <v-icon class="hn" size="25">hn-programming</v-icon>
+                  Current Tech Stack
+                </span>
+                <v-divider thickness="3" opacity="100"></v-divider>
+                <v-container
+                  class="thin-scroll d-flex flex-row ga-4 pa-0 pt-5"
+                  style="overflow-x: auto"
+                >
+                  <SkillCard
+                    v-for="(item, i) in CurrentTechStack"
+                    :skill="item"
+                    style="flex-shrink: 0"
+                  />
+                </v-container>
+              </v-container>
             </section>
 
             <!-- 

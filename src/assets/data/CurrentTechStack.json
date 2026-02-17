@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Vue.js",
+        "image": "Vue Logo.png"
+    },
+    {
+        "name": "Svelte 5",
+        "image": "Svelte Logo.png"
+    },
+    {
+        "name": "Java",
+        "image": "Java Logo.png"
+    },
+    {
+        "name": "Tomcat",
+        "image": "Tomcat Logo.png"
+    },
+    {
+        "name": "TypeScript",
+        "image": "TypeScript Logo.png"
+    },
+    {
+        "name": "C#",
+        "image": "CSharp Logo.png"
+    },
+    {
+        "name": "PostgreSQL",
+        "image": "PGSQL Logo.png"
+    },
+    {
+        "name": "MongoDB",
+        "image": "MongoDB Logo.png"
+    }
+]
