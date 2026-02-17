@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import Navbar from "./assets/Navbar.vue";
+import Navbar from "@/assets/Navbar.vue";
 import { ref, onMounted } from "vue";
 import { useDisplay } from "vuetify";
 import Projects from "@/assets/data/Projects.json";
-import ExperienceCard from "./assets/ExperienceCard.vue";
+import ExperienceCard from "@/assets/ExperienceCard.vue";
 import WorkExperienceData from "@/assets/data/WorkExperiences.json";
-import CurrentTechStack from "./assets/data/CurrentTechStack.json";
-import ProjectCard from "./assets/ProjectCard.vue";
-import ProjectViewBox from "./assets/ProjectViewBox.vue";
-import TooltipBtn from "./assets/TooltipBtn.vue";
-import ProjectViewBoxMobile from "./assets/ProjectViewBoxMobile.vue";
-import SkillCard from "./assets/SkillCard.vue";
+import CurrentTechStack from "@/assets/data/CurrentTechStack.json";
+import ProjectCard from "@/assets/ProjectCard.vue";
+import ProjectViewBox from "@/assets/ProjectViewBox.vue";
+import TooltipBtn from "@/assets/TooltipBtn.vue";
+import ProjectViewBoxMobile from "@/assets/ProjectViewBoxMobile.vue";
+import SkillCard from "@/assets/SkillCard.vue";
 const { mdAndUp } = useDisplay();
 const currentProjectView = ref({});
 const setProjectView = (project) => {
