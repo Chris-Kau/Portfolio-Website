@@ -13,11 +13,6 @@ import ProjectTooltipBtn from "./ProjectTooltipBtn.vue";
     <div
       class="d-flex flex-column left"
       style="
-        width: 50%;
-        flex: 0 0 50%;
-        min-width: 0;
-        min-height: 0;
-        height: 100%;
         border-right: 1px solid var(--color-primary);
       "
     >
@@ -172,11 +167,10 @@ import ProjectTooltipBtn from "./ProjectTooltipBtn.vue";
   object-fit: cover;
 }
 .left {
-  width: 40%;
+  width: 30%;
   flex: 0 0 40%;
   min-width: 0;
   min-height: 0;
-  border-right: 1px solid var(--color-primary);
   align-self: stretch;
 }
 .projectBox {
