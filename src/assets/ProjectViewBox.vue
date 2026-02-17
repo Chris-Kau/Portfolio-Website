@@ -129,7 +129,7 @@ import ProjectTooltipBtn from "./ProjectTooltipBtn.vue";
   <!-- EMPTY STATE -->
   <v-container
   v-else
-    class="d-flex flex-row pa-0 ma-0"
+    class="d-flex flex-row pa-0 ma-0 projectBox"
     fluid
   >
     <v-container
@@ -184,6 +184,7 @@ import ProjectTooltipBtn from "./ProjectTooltipBtn.vue";
   height: auto;
   align-items: stretch;
   overflow: hidden;
+  min-height: 360px; /* optional safety for small widths */
   border: 1px solid var(--color-primary);
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
 }
