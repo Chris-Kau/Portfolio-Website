@@ -1,12 +1,14 @@
 <script setup lang="ts">
 import Navbar from './assets/Navbar.vue'
 import { ref } from 'vue'
+import { useDisplay } from 'vuetify'
 import Projects from '@/assets/data/Projects.json'
 import ExperienceCard from './assets/ExperienceCard.vue'
 import WorkExperienceData from '@/assets/data/WorkExperiences.json'
 import ProjectCard from './assets/ProjectCard.vue'
 import ProjectViewBox from './assets/ProjectViewBox.vue'
 import TooltipBtn from './assets/TooltipBtn.vue'
+const { mdAndUp } = useDisplay()
 const currentProjectView = ref({})
 const setProjectView = (project) => {
   currentProjectView.value = project
@@ -62,7 +64,7 @@ const copyEmail = async () => {
           -->
             <section id="about">
               <v-container
-                class="d-flex justify-space-between pr-0 align-center pb-10 w-100 w-md-70"
+                class="d-flex pr-0 align-center justify-center pb-10 w-100 w-md-70"
               >
                 <div class="sans flex-1" style="max-width: 500px">
                   <div class="pr">
@@ -144,7 +146,7 @@ const copyEmail = async () => {
                     </span>
                   </v-container>
                 </div>
-                <div class="d-flex pl-10 flex-shrink-0" style="width: fit-content">
+                <div v-if="mdAndUp" class="d-flex pl-10 flex-shrink-0" style="width: fit-content">
                   <img
                     src="./assets/images/oshawott logo.png"
                     alt="oshawott logo"
