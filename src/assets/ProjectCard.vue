@@ -14,7 +14,10 @@ const dims = 200;
     class="project-card pa-0 ga-0"
     style="aspect-ratio: 1/1"
   >
-    <div class="d-flex text-center card-darken justify-center align-center mono pa-3" style="font-size:20px">
+    <div
+      class="d-flex text-center card-darken justify-center align-center mono pa-3"
+      style="font-size: 20px"
+    >
       {{ project.shortDescription }}
     </div>
     <v-img

@@ -4,8 +4,22 @@ import ProjectTooltipBtn from "./ProjectTooltipBtn.vue";
 </script>
 
 <template>
-  <v-container v-if="project.name" class="d-flex flex-row pa-0 ma-0 projectBox" fluid>
-    <!-- LEFT SIDE (40%) -->
+  <v-container v-if="project.name" class="d-flex flex-column pa-0 ma-0 projectBox" fluid>
+    <!-- RIGHT SIDE -->
+    <div class="right">
+      <video
+        :key="project.demoFile"
+        :src="`./${project.demoFile}`"
+        autoplay
+        loop
+        muted
+        controls
+        playsinline
+        preload="metadata"
+        class="vid"
+      />
+    </div>
+    <!-- TOP SIDE (40%) -->
     <div
       class="d-flex flex-column left"
       style="border-right: 1px solid var(--color-primary)"
@@ -29,7 +43,7 @@ import ProjectTooltipBtn from "./ProjectTooltipBtn.vue";
             style="flex: 0 0 auto; background-color: var(--color-secondary)"
           >
             <v-container class="d-flex flex-row align-center pa-0">
-              <v-card-text class="mono text-h5 pt-0 pb-0 ma-0">
+              <v-card-text class="mono text-h6 pt-0 pb-0 ma-0">
                 {{ project.name }}
               </v-card-text>
 
@@ -41,7 +55,7 @@ import ProjectTooltipBtn from "./ProjectTooltipBtn.vue";
                   location="bottom"
                   :icon="item.icon"
                   :link="item.link"
-                  size="30"
+                  size="20"
                 />
               </div>
             </v-container>
@@ -55,7 +69,7 @@ import ProjectTooltipBtn from "./ProjectTooltipBtn.vue";
           >
             <template v-slot:subtitle>
               <v-icon class="hn" size="20">{{ project.extraicon }}</v-icon>
-              <span class="sans pl-2" style="font-size: 18px">{{ project.extra }}</span>
+              <span class="sans pl-2" style="font-size: 12px">{{ project.extra }}</span>
             </template>
           </v-card-item>
 
@@ -63,7 +77,7 @@ import ProjectTooltipBtn from "./ProjectTooltipBtn.vue";
 
           <!-- Description -->
           <div class="thin-scroll pt-1" style="flex: 1; min-height: 0; overflow-y: auto">
-            <v-card-text class="sans pt-0 pb-1" style="font-size: 18px">
+            <v-card-text class="sans pt-0 pb-1" style="font-size: 12px">
               {{ project.description }}
             </v-card-text>
           </div>
@@ -87,7 +101,7 @@ import ProjectTooltipBtn from "./ProjectTooltipBtn.vue";
             v-for="skill in project.skills"
             :key="skill"
             class="sans skill-chip opacity-90"
-            style="flex-shrink: 0; font-size: 18px"
+            style="flex-shrink: 0; font-size: 12px"
             color="ck-accent"
             text-color="ck-supportingaccent"
             variant="flat"
@@ -98,24 +112,10 @@ import ProjectTooltipBtn from "./ProjectTooltipBtn.vue";
         </v-container>
       </v-card>
     </div>
-    <!-- RIGHT SIDE -->
-    <div class="right">
-      <video
-        :key="project.demoFile"
-        :src="`./${project.demoFile}`"
-        autoplay
-        loop
-        muted
-        controls
-        playsinline
-        preload="metadata"
-        class="vid"
-      />
-    </div>
   </v-container>
 
   <!-- EMPTY STATE -->
-  <v-container v-else class="d-flex flex-row pa-0 ma-0 projectBox" fluid>
+  <v-container v-else class="d-flex flex-column align-cetner pa-0 ma-0 projectBox" fluid>
     <!-- mirror the .left div so width is identical -->
     <div
       class="d-flex flex-column left"
@@ -131,19 +131,6 @@ import ProjectTooltipBtn from "./ProjectTooltipBtn.vue";
           hn-arrow-circle-down-solid
         </v-icon>
       </v-container>
-    </div>
-
-    <!-- mirror the .right div with a placeholder so aspect-ratio is held -->
-    <div
-      class="right d-flex flex-column justify-center text-center align-center"
-      style="background-color: transparent"
-    >
-      <span class="sans text-h3" style="color: var(--color-primary)">
-        Please Select a Project
-      </span>
-      <v-icon class="hn" size="50" style="padding-top: 50px; color: var(--color-text)">
-        hn-arrow-circle-down-solid
-      </v-icon>
     </div>
   </v-container>
 </template>
@@ -163,7 +150,7 @@ import ProjectTooltipBtn from "./ProjectTooltipBtn.vue";
   min-width: 0;
   height: auto;
   aspect-ratio: 16 / 9;
-
+  width: 100%;
   display: flex;
 }
 
@@ -174,7 +161,7 @@ import ProjectTooltipBtn from "./ProjectTooltipBtn.vue";
   object-fit: cover;
 }
 .left {
-  width: 30%;
+  width: 100%;
   flex: 0 0 40%;
   min-width: 0;
   min-height: 0;

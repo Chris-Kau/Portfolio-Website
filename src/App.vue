@@ -1,43 +1,43 @@
 <script setup lang="ts">
-import Navbar from './assets/Navbar.vue'
-import { ref, onMounted } from 'vue'
-import { useDisplay } from 'vuetify'
-import Projects from '@/assets/data/Projects.json'
-import ExperienceCard from './assets/ExperienceCard.vue'
-import WorkExperienceData from '@/assets/data/WorkExperiences.json'
-import ProjectCard from './assets/ProjectCard.vue'
-import ProjectViewBox from './assets/ProjectViewBox.vue'
-import TooltipBtn from './assets/TooltipBtn.vue'
-const { mdAndUp } = useDisplay()
-const currentProjectView = ref({})
+import Navbar from "./assets/Navbar.vue";
+import { ref, onMounted } from "vue";
+import { useDisplay } from "vuetify";
+import Projects from "@/assets/data/Projects.json";
+import ExperienceCard from "./assets/ExperienceCard.vue";
+import WorkExperienceData from "@/assets/data/WorkExperiences.json";
+import ProjectCard from "./assets/ProjectCard.vue";
+import ProjectViewBox from "./assets/ProjectViewBox.vue";
+import TooltipBtn from "./assets/TooltipBtn.vue";
+import ProjectViewBoxMobile from "./assets/ProjectViewBoxMobile.vue";
+const { mdAndUp } = useDisplay();
+const currentProjectView = ref({});
 const setProjectView = (project) => {
-  currentProjectView.value = project
-}
-const snackbar = ref(false)
-const snackbarTimeout = ref(1500)
-const swapEmailIcon = ref(false)
+  currentProjectView.value = project;
+};
+const snackbar = ref(false);
+const snackbarTimeout = ref(1500);
+const swapEmailIcon = ref(false);
 const copyEmail = async () => {
-  await navigator.clipboard.writeText('chriskau04@gmail.com')
+  await navigator.clipboard.writeText("chriskau04@gmail.com");
   if (swapEmailIcon.value === false) {
-    swapEmailIcon.value = true
-    snackbar.value = true
+    swapEmailIcon.value = true;
+    snackbar.value = true;
     setTimeout(() => {
-      swapEmailIcon.value = false
-    }, 1000)
+      swapEmailIcon.value = false;
+    }, 1000);
   }
-}
-const showAbout = ref(false)
-const showExperience = ref(false)
-const showProjects = ref(false)
-const showShells = ref(false)
+};
+const showAbout = ref(false);
+const showExperience = ref(false);
+const showProjects = ref(false);
+const showShells = ref(false);
 
 onMounted(() => {
-  setTimeout(() => showAbout.value = true, 200)
-  setTimeout(() => showExperience.value = true, 400)
-  setTimeout(() => showProjects.value = true, 600)
-  setTimeout(() => (showShells.value = true), 800)
-})
-
+  setTimeout(() => (showAbout.value = true), 200);
+  setTimeout(() => (showExperience.value = true), 400);
+  setTimeout(() => (showProjects.value = true), 600);
+  setTimeout(() => (showShells.value = true), 800);
+});
 </script>
 <template>
   <v-app class="pa-0 pb-0 mb-0">
@@ -50,7 +50,9 @@ onMounted(() => {
       variant="flat"
       content-class="d-flex justify-center text-center"
     >
-      <span class="sans" style="color: white; font-size: 20px"> Copied to Clipboard </span>
+      <span class="sans" style="color: white; font-size: 20px">
+        Copied to Clipboard
+      </span>
       <template v-slot:actions>
         <v-icon color="green" size="30">mdi-check-bold</v-icon>
       </template>
@@ -72,15 +74,14 @@ onMounted(() => {
         </v-col>
 
         <v-col cols="12" md="8">
-          <v-main style="padding-bottom:0px; margin: 0 auto">
+          <v-main style="padding-bottom: 0px; margin: 0 auto">
             <!-- 
           About me Section 
           -->
             <section id="about">
               <v-slide-x-transition appear>
-
-                <v-container 
-                v-if="showAbout"
+                <v-container
+                  v-if="showAbout"
                   class="d-flex pr-0 align-center justify-center pb-10 w-100 w-md-70 fade"
                 >
                   <div class="sans flex-1" style="max-width: 500px">
@@ -100,18 +101,28 @@ onMounted(() => {
                         <span style="color: var(--color-secondary)">Hello, I'm </span>
                         <span style="color: var(--color-text)">Chris Kau</span>
                       </p>
-                      <p class="sans" style="color: var(--color-secondary); font-size: 18px">
+                      <p
+                        class="sans"
+                        style="color: var(--color-secondary); font-size: 18px"
+                      >
                         I'm a student at
-                        <a class="ahref" href="https://www.csulb.edu/" target="_blank">CSULB</a>
+                        <a class="ahref" href="https://www.csulb.edu/" target="_blank"
+                          >CSULB</a
+                        >
                         and a
-                        <span style="color: var(--color-text); background-color: var(--color-accent)">
+                        <span
+                          style="
+                            color: var(--color-text);
+                            background-color: var(--color-accent);
+                          "
+                        >
                           Full-Stack SWE</span
                         >
                         @
                         <a class="ahref" href="https://g2ss.com/" target="_blank"
                           >G2 Software Systems </a
-                        >. Being able to create software that has an impact on users is what keeps me
-                        going!
+                        >. Being able to create software that has an impact on users is
+                        what keeps me going!
                       </p>
                     </div>
                     <v-container class="social-icons d-flex flex-row ga-md-7 ps-1">
@@ -133,11 +144,13 @@ onMounted(() => {
                             target="_blank"
                           >
                             View Resume
-                            <v-icon size="20" class="ms-2 hn text-white"> hn-writing </v-icon>
+                            <v-icon size="20" class="ms-2 hn text-white">
+                              hn-writing
+                            </v-icon>
                           </v-btn>
                         </template>
                       </v-tooltip>
-  
+
                       <TooltipBtn
                         text="Github"
                         location="bottom"
@@ -157,13 +170,19 @@ onMounted(() => {
                           text="chriskau04@gmail.com"
                           location="bottom"
                           link=""
-                          :icon="!swapEmailIcon ? 'hn-envelope-solid' : 'hn-clipboard-solid'"
+                          :icon="
+                            !swapEmailIcon ? 'hn-envelope-solid' : 'hn-clipboard-solid'
+                          "
                           size="50"
                         />
                       </span>
                     </v-container>
                   </div>
-                  <div v-if="mdAndUp" class="d-flex pl-10 flex-shrink-0" style="width: fit-content">
+                  <div
+                    v-if="mdAndUp"
+                    class="d-flex pl-10 flex-shrink-0"
+                    style="width: fit-content"
+                  >
                     <img
                       src="./assets/images/oshawott logo.png"
                       alt="oshawott logo"
@@ -179,8 +198,15 @@ onMounted(() => {
           -->
             <section id="experience">
               <v-slide-x-reverse-transition appear class="experience-slide">
-                <v-container class="pa-0 pb-10 fade" max-width="100%" v-if="showExperience">
-                  <p class="mono text-left" style="color: var(--color-secondary); font-size: 48px">
+                <v-container
+                  class="pa-0 pb-10 fade"
+                  max-width="100%"
+                  v-if="showExperience"
+                >
+                  <p
+                    class="mono text-left"
+                    style="color: var(--color-secondary); font-size: 48px"
+                  >
                     <span class="d-flex align-center ga-3">
                       <v-icon class="hn" size="25">hn-business</v-icon>
                       Work Experience
@@ -236,8 +262,16 @@ onMounted(() => {
           -->
             <section id="projects">
               <v-slide-x-transition appear class="projects-slide">
-                <v-container v-if="showProjects" class="pa-0 fade" max-width="100%" style="margin-bottom: 100px">
-                  <p class="mono text-left" style="color: var(--color-secondary); font-size: 48px">
+                <v-container
+                  v-if="showProjects"
+                  class="pa-0 fade"
+                  max-width="100%"
+                  style="margin-bottom: 100px"
+                >
+                  <p
+                    class="mono text-left"
+                    style="color: var(--color-secondary); font-size: 48px"
+                  >
                     <span class="d-flex align-center ga-3">
                       <v-icon class="hn" size="25">hn-sparkles-solid</v-icon>
                       Projects
@@ -245,13 +279,25 @@ onMounted(() => {
                     <v-divider thickness="3" opacity="100"></v-divider>
                   </p>
                   <v-container class="d-flex flex-column ga-8" max-width="100%">
-                    <v-container class="d-flex justify-center" style="max-width: 90%">
-                      <ProjectViewBox :project="currentProjectView || {}"></ProjectViewBox>
+                    <v-container
+                      v-if="mdAndUp"
+                      class="d-flex justify-center"
+                      style="max-width: 90%"
+                    >
+                      <ProjectViewBox
+                        :project="currentProjectView || {}"
+                      ></ProjectViewBox>
+                    </v-container>
+                    <v-container v-else>
+                      <ProjectViewBoxMobile
+                        :project="currentProjectView || {}"
+                      ></ProjectViewBoxMobile>
                     </v-container>
                     <v-container
-                      class="thin-scroll d-flex flex-col justify-center align-center ga-5"
+                      class="thin-scroll d-flex flex-row align-center ga-5"
                       style="
                         overflow-y: auto;
+                        overflow-x: auto;
                         max-height: 500px;
                         max-width: 100%;
                         width: fit-content;
@@ -328,7 +374,7 @@ section {
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
 }
 
 .scroll-container {
@@ -355,9 +401,7 @@ a.ahref {
   cursor: pointer;
   text-decoration-line: underline;
   text-decoration-style: dashed;
-  transition:
-    color 0.2s,
-    background-color 0.2s;
+  transition: color 0.2s, background-color 0.2s;
 }
 
 a.ahref:hover {
@@ -400,15 +444,20 @@ a.ahref:hover {
   height: auto;
   image-rendering: pixelated;
 }
-.w-md-70 { width: 70%; }
-@media (max-width: 959px) { /* < md */
-  .w-md-70 { width: 100%; }
+.w-md-70 {
+  width: 70%;
+}
+@media (max-width: 959px) {
+  /* < md */
+  .w-md-70 {
+    width: 100%;
+  }
 }
 
-:deep(.about-slide-enter-active){
+:deep(.about-slide-enter-active) {
   transition-delay: 400ms;
 }
-:deep(.about-slide-leave-active){
+:deep(.about-slide-leave-active) {
   transition-delay: 0ms;
 }
 </style>
