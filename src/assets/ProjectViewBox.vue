@@ -122,14 +122,18 @@ import ProjectTooltipBtn from "./ProjectTooltipBtn.vue";
   </v-container>
 
   <!-- EMPTY STATE -->
-  <v-container
+<v-container
   v-else
-    class="d-flex flex-row pa-0 ma-0 projectBox"
-    fluid
+  class="d-flex flex-row pa-0 ma-0 projectBox"
+  fluid
+>
+  <!-- mirror the .left div so width is identical -->
+  <div
+    class="d-flex flex-column left"
+    style="border-right: 1px solid var(--color-primary);"
   >
     <v-container
-      class="d-flex flex-column justify-center align-center text-center"
-      style="width: 100%; height: 100%; flex: 1"
+      class="d-flex flex-column justify-center align-center text-center h-100"
     >
       <span class="sans text-h3" style="color: var(--color-primary)">
         Please Select a Project
@@ -138,7 +142,18 @@ import ProjectTooltipBtn from "./ProjectTooltipBtn.vue";
         hn-arrow-circle-down-solid
       </v-icon>
     </v-container>
-  </v-container>
+  </div>
+
+  <!-- mirror the .right div with a placeholder so aspect-ratio is held -->
+  <div class="right d-flex flex-column justify-center text-center align-center " style="background-color: transparent;">
+      <span class="sans text-h3" style="color: var(--color-primary)">
+        Please Select a Project
+      </span>
+      <v-icon class="hn" size="50" style="padding-top: 50px; color: var(--color-text)">
+        hn-arrow-circle-down-solid
+      </v-icon>
+  </div>
+</v-container>
 </template>
 
 <style scoped>
@@ -178,7 +193,7 @@ import ProjectTooltipBtn from "./ProjectTooltipBtn.vue";
   height: auto;
   align-items: stretch;
   overflow: hidden;
-  min-height: 360px; /* optional safety for small widths */
+  min-height: 360px;
   border: 1px solid var(--color-primary);
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
 }
