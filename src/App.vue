@@ -202,7 +202,7 @@ onMounted(() => {
                   <v-icon class="hn" size="25">hn-programming</v-icon>
                   Current Tech Stack
                 </span>
-                <v-divider thickness="3" opacity="100"></v-divider>
+                <v-divider thickness="3" opacity="100" style="color: var(--color-secondary)"></v-divider>
                 <v-container
                   class="thin-scroll d-flex flex-wrap flex-row ga-4 pa-0 pt-5"
                   style="width: 100%"
