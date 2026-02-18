@@ -30,15 +30,18 @@ const copyEmail = async () => {
   }
 };
 const showAbout = ref(false);
+const showTechStack = ref(false);
 const showExperience = ref(false);
 const showProjects = ref(false);
 const showShells = ref(false);
 
 onMounted(() => {
   setTimeout(() => (showAbout.value = true), 200);
-  setTimeout(() => (showExperience.value = true), 400);
-  setTimeout(() => (showProjects.value = true), 600);
-  setTimeout(() => (showShells.value = true), 800);
+  setTimeout(() => (showTechStack.value = true), 400);
+
+  setTimeout(() => (showExperience.value = true), 600);
+  setTimeout(() => (showProjects.value = true), 800);
+  setTimeout(() => (showShells.value = true), 1000);
 });
 </script>
 <template>
@@ -194,7 +197,8 @@ onMounted(() => {
                 </v-container>
               </v-slide-x-transition>
               <!-- Current Tech Stack -->
-              <v-container class="pa-0 pb-5">
+               <v-slide-x-reverse-transition appear>
+                <v-container v-if="showTechStack" class="pa-0 pb-5">
                 <span
                   class="mono d-flex align-center ga-3"
                   style="color: var(--color-secondary); font-size: 48px"
@@ -214,13 +218,15 @@ onMounted(() => {
                   />
                 </v-container>
               </v-container>
+              </v-slide-x-reverse-transition>
+
             </section>
 
             <!-- 
           Experience Section 
           -->
             <section id="experience">
-              <v-slide-x-reverse-transition appear class="experience-slide">
+              <v-slide-x-transition appear class="experience-slide">
                 <v-container
                   class="pa-0 pb-10 fade"
                   max-width="100%"
@@ -278,13 +284,13 @@ onMounted(() => {
                     </div>
                   </v-container>
                 </v-container>
-              </v-slide-x-reverse-transition>
+              </v-slide-x-transition>
             </section>
             <!-- 
           Projects Section 
           -->
             <section id="projects">
-              <v-slide-x-transition appear class="projects-slide">
+              <v-slide-x-reverse-transition appear class="projects-slide">
                 <v-container
                   v-if="showProjects"
                   class="pa-0 fade"
@@ -341,7 +347,7 @@ onMounted(() => {
                     </section>
                   </v-container>
                 </v-container>
-              </v-slide-x-transition>
+              </v-slide-x-reverse-transition>
             </section>
           </v-main>
         </v-col>
