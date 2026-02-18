@@ -67,7 +67,7 @@ onMounted(() => {
               <img
                 v-for="n in 6"
                 :key="n"
-                src="./assets/images/pixel scalchop thicker.png"
+                src="./assets/images/pixel_scalchop_thicker.png"
                 class="scalchop"
                 alt="pixel scalchop"
               />
@@ -352,7 +352,7 @@ onMounted(() => {
               <img
                 v-for="n in 6"
                 :key="n"
-                src="./assets/images/pixel scalchop thicker.png"
+                src="./assets/images/pixel_scalchop_thicker.png"
                 class="scalchop"
                 alt="pixel scalchop"
               />
@@ -461,11 +461,10 @@ a.ahref:hover {
   flex-direction: column;
   justify-content: space-between; /* 1 per row, evenly spaced */
   height: 100%;
-  padding: 40px 0; /* optional top/bottom spacing */
 }
 
 .scalchop {
-  width: 70px; /* adjust size */
+  width: 150px; /* adjust size */
   height: auto;
   image-rendering: pixelated;
 }
