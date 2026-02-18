@@ -6,7 +6,7 @@ defineProps(['company', 'date', 'role', 'description', 'skills', 'link'])
 <template>
   <v-card
     class="vcardhover mx-auto"
-    width="400"
+    width="415"
     flat
     style="
       color: white;
