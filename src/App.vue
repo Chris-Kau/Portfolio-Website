@@ -45,7 +45,7 @@ onMounted(() => {
 });
 </script>
 <template>
-  <v-app class="pa-0 pb-0 mb-0" style="letter-spacing:0.5px">
+  <v-app class="pa-0 pb-0 mb-0">
     <Navbar />
     <v-snackbar
       v-model="snackbar"
@@ -55,7 +55,7 @@ onMounted(() => {
       variant="flat"
       content-class="d-flex justify-center text-center"
     >
-      <span class="sans" style="color: white; font-size: 20px">
+      <span class="sans" style="color: white; font-size: 18px">
         Copied to Clipboard
       </span>
       <template v-slot:actions>
@@ -107,7 +107,7 @@ onMounted(() => {
                       </p>
                       <p
                         class="sans"
-                        style="color: var(--color-secondary); font-size: 20px"
+                        style="color: var(--color-secondary); font-size: 18px"
                       >
                         I'm a student at
                         <a class="ahref" href="https://www.csulb.edu/" target="_blank"

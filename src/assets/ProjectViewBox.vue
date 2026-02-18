@@ -64,7 +64,7 @@ const scrollTo = (id) => {
           >
             <template v-slot:subtitle>
               <v-icon class="hn" size="20">{{ project.extraicon }}</v-icon>
-              <span class="sans pl-2" style="font-size: 18px">{{ project.extra }}</span>
+              <span class="sans pl-2" style="font-size: 16px">{{ project.extra }}</span>
             </template>
           </v-card-item>
 
@@ -72,7 +72,7 @@ const scrollTo = (id) => {
 
           <!-- Description -->
           <div class="thin-scroll pt-1" style="flex: 1; min-height: 0; overflow-y: auto">
-            <v-card-text class="sans pt-0 pb-1" style="font-size: 18px">
+            <v-card-text class="sans pt-0 pb-1" style="font-size: 16px">
               {{ project.description }}
             </v-card-text>
           </div>
@@ -96,7 +96,7 @@ const scrollTo = (id) => {
             v-for="skill in project.skills"
             :key="skill"
             class="sans skill-chip opacity-90"
-            style="flex-shrink: 0; font-size: 18px"
+            style="flex-shrink: 0; font-size: 16px"
             color="ck-accent"
             text-color="ck-supportingaccent"
             variant="flat"

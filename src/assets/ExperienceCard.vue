@@ -34,13 +34,13 @@ defineProps(['company', 'date', 'role', 'description', 'skills', 'link'])
     </template>
 
     <template #subtitle>
-      <span class="sans" style="font-size: 18px">{{ role }} • {{ date }}</span>
+      <span class="sans font-weight-thin" style="font-size:16px;">{{ role }} • {{ date }}</span>
     </template>
 
     <!-- Description -->
     <v-container
       class="sans pt-4"
-      style="color: var(--color-paragraph-text); background-color: transparent; font-size: 18px"
+      style="color: var(--color-paragraph-text); background-color: transparent; font-size: 16px"
     >
       {{ description }}
     </v-container>
@@ -56,7 +56,7 @@ defineProps(['company', 'date', 'role', 'description', 'skills', 'link'])
         color="ck-accent"
         variant="flat"
         label
-        style="font-size:18px"
+        style="font-size:16px"
       >
         {{ skill }}
       </v-chip>
@@ -73,6 +73,7 @@ defineProps(['company', 'date', 'role', 'description', 'skills', 'link'])
 /* Optional: adjust text color inside header if needed */
 :deep(.v-card-title),
 :deep(.v-card-subtitle) {
+  font-weight: 100 !important;
   color: white; /* or your preferred color */
 }
 

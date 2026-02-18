@@ -16,7 +16,7 @@ const dims = 200;
   >
     <div
       class="d-flex text-center card-darken justify-center align-center mono pa-3"
-      style="font-size: 20px"
+      style="font-size: 18px"
     >
       {{ project.shortDescription }}
     </div>
