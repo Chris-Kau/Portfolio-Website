@@ -2,7 +2,7 @@
         {
         "company": "The Coder School",
         "role": "Coding Coach",
-        "date": "July 2024 - January 2025",
+        "date": "July 2024 - Jan. 2025",
         "description": "Worked closely with students in 2:1 sessions, guiding them through hands-on programming projects. Encouraged curiosity and collaboration by helping students reverse-engineer games and build projects that align with their interests.",
         "skills":[
             "HTML5",
@@ -15,8 +15,8 @@
     },
     {
         "company": "G2 Software Systems",
-        "role": "Software Engineer Intern",
-        "date" : "May 2025 - August 2025",
+        "role": "SWE Intern",
+        "date" : "May 2025 - Aug. 2025",
         "description": "Helped developed a full-stack web application in an Agile Scrum Environment. Worked closely with engineers and quality assurance to improve system functionality and maintain high code quality via peer reviews CI/CD pipelines. Created unit and end-to-end tests to validate user interactions and dataflow. Additionally, obtained an active U.S. Secret-level security clearance.",
         "skills":[
             "TypeScript",

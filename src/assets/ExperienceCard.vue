@@ -17,7 +17,7 @@ defineProps(['company', 'date', 'role', 'description', 'skills', 'link'])
   >
     <!-- Title + Subtitle -->
     <template #title>
-      <div class="d-flex justify-space-between flex-row align-center">
+      <div class="d-flex justify-space-between flex-row align-center pb-0">
         <div class="mono text-h4">
           {{ company }}
         </div>
@@ -27,14 +27,13 @@ defineProps(['company', 'date', 'role', 'description', 'skills', 'link'])
             location="top"
             :link="link"
             icon="hn-external-link"
-            size="25"
           />
         </div>
       </div>
     </template>
 
     <template #subtitle>
-      <span class="sans font-weight-thin" style="font-size:16px;">{{ role }} • {{ date }}</span>
+      <span class="sans" style="font-size:16px">{{ role }} • {{ date }}</span>
     </template>
 
     <!-- Description -->
@@ -73,7 +72,6 @@ defineProps(['company', 'date', 'role', 'description', 'skills', 'link'])
 /* Optional: adjust text color inside header if needed */
 :deep(.v-card-title),
 :deep(.v-card-subtitle) {
-  font-weight: 100 !important;
   color: white; /* or your preferred color */
 }
 

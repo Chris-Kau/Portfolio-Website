@@ -50,7 +50,7 @@ const menuOpen = ref(false)
           :key="item.id"
           @click="scrollTo(item.id)"
           color="ck-accent"
-          class="sans text-h6"
+          class="sans"
         >
           {{ item.label }}
         </v-btn>
