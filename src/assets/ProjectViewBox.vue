@@ -1,6 +1,15 @@
 <script setup>
 const props = defineProps(["project"]);
 import ProjectTooltipBtn from "./ProjectTooltipBtn.vue";
+const scrollTo = (id) => {
+  const container = document.querySelector('.scroll-container')
+  if (!container) return
+
+  const el = document.getElementById(id)
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }
+}
 </script>
 
 <template>
@@ -8,7 +17,6 @@ import ProjectTooltipBtn from "./ProjectTooltipBtn.vue";
     <!-- LEFT SIDE (40%) -->
     <div
       class="d-flex flex-column left"
-      style="border-right: 1px solid var(--color-primary)"
     >
       <v-card
         class="d-flex flex-column"
@@ -19,7 +27,9 @@ import ProjectTooltipBtn from "./ProjectTooltipBtn.vue";
           background-color: transparent;
           color: var(--color-paragraph-text);
           border-radius: 0;
+          border: none;
         "
+        elevation="0"
       >
         <!-- TOP + DESCRIPTION AREA -->
         <div class="d-flex flex-column pb-0" style="flex: 1; min-height: 0">
@@ -41,7 +51,6 @@ import ProjectTooltipBtn from "./ProjectTooltipBtn.vue";
                   location="bottom"
                   :icon="item.icon"
                   :link="item.link"
-                  size="30"
                 />
               </div>
             </v-container>
@@ -115,36 +124,26 @@ import ProjectTooltipBtn from "./ProjectTooltipBtn.vue";
   </v-container>
 
   <!-- EMPTY STATE -->
-  <v-container v-else class="d-flex flex-row pa-0 ma-0 projectBox" fluid>
-    <!-- mirror the .left div so width is identical -->
+  <v-container v-else class="d-flex projectBox" fluid >
     <div
-      class="d-flex flex-column left"
-      style="border-right: 1px solid var(--color-primary)"
-    >
-      <v-container
-        class="d-flex flex-column justify-center align-center text-center h-100"
-      >
-        <span class="sans text-h3" style="color: var(--color-primary)">
-          Please Select a Project
-        </span>
-        <v-icon class="hn" size="50" style="padding-top: 50px; color: var(--color-text)">
-          hn-arrow-circle-down-solid
-        </v-icon>
-      </v-container>
-    </div>
-
-    <!-- mirror the .right div with a placeholder so aspect-ratio is held -->
-    <div
-      class="right d-flex flex-column justify-center text-center align-center"
-      style="background-color: transparent"
+      class=" d-flex flex-column justify-center text-center align-center"
+      style="background-color: transparent; width:100%"
     >
       <span class="sans text-h3" style="color: var(--color-primary)">
         Please Select a Project
       </span>
-      <v-icon class="hn" size="50" style="padding-top: 50px; color: var(--color-text)">
-        hn-arrow-circle-down-solid
-      </v-icon>
+      <div class="pt-5">
+      <v-btn size="50" class="bg-transparent " flat>
+        <v-icon @click="scrollTo('project-selection')" class="hn" size="50" style="color: var(--color-text)">
+          hn-arrow-circle-down-solid
+        </v-icon>
+      </v-btn>
+      </div>
+
+
     </div>
+
+    
   </v-container>
 </template>
 
@@ -182,7 +181,7 @@ import ProjectTooltipBtn from "./ProjectTooltipBtn.vue";
 }
 .projectBox {
   width: 100%;
-  height: auto;
+  height: 360px;
   align-items: stretch;
   overflow: hidden;
   min-height: 360px;

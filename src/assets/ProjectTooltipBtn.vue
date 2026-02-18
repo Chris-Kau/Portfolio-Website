@@ -3,7 +3,7 @@
     <template v-slot:activator="{ props }">
       <v-btn
         v-bind="props"
-        size="50"
+        :size="`${mdAndUp ? 50 : 20}`"
         class="project-social-icons"
         variant="text"
         :href="link"
@@ -18,7 +18,9 @@
 </template>
 
 <script setup>
-defineProps(["location", "text", "icon", "link", "aria", "size"]);
+defineProps(["location", "text", "icon", "link", "aria"]);
+import { useDisplay } from "vuetify";
+const { mdAndUp } = useDisplay();
 </script>
 
 <style scoped>

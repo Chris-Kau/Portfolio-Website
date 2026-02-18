@@ -42,7 +42,7 @@ onMounted(() => {
 });
 </script>
 <template>
-  <v-app class="pa-0 pb-0 mb-0">
+  <v-app class="pa-0 pb-0 mb-0" style="letter-spacing:0.5px">
     <Navbar />
     <v-snackbar
       v-model="snackbar"
@@ -87,7 +87,6 @@ onMounted(() => {
                   class="d-flex pr-0 align-center justify-center pb-10 w-100 w-md-70 fade"
                 >
                   <div class="sans flex-1" style="max-width: 500px">
-                    <div class="pr">
                       <p
                         class="sans ml-1"
                         style="
@@ -105,7 +104,7 @@ onMounted(() => {
                       </p>
                       <p
                         class="sans"
-                        style="color: var(--color-secondary); font-size: 18px"
+                        style="color: var(--color-secondary); font-size: 20px"
                       >
                         I'm a student at
                         <a class="ahref" href="https://www.csulb.edu/" target="_blank"
@@ -122,11 +121,10 @@ onMounted(() => {
                         >
                         @
                         <a class="ahref" href="https://g2ss.com/" target="_blank"
-                          >G2 Software Systems </a
+                          >G2 Software Systems</a
                         >. Being able to create software that has an impact on users is
                         what keeps me going!
                       </p>
-                    </div>
                     <v-container
                       class="social-icons d-flex flex-row ga-md-7 ga-sm-3 ps-1"
                     >
@@ -318,27 +316,29 @@ onMounted(() => {
                         :project="currentProjectView || {}"
                       ></ProjectViewBoxMobile>
                     </v-container>
-                    <v-container
-                      class="thin-scroll d-flex flex-row align-center ga-5"
-                      style="
-                        overflow-y: auto;
-                        overflow-x: auto;
-                        max-height: 500px;
-                        max-width: 100%;
-                        width: fit-content;
-                        border: 1px solid var(--color-primary);
-                        background-color: transparent;
-                        box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
-                      "
-                    >
-                      <ProjectCard
-                        v-for="(item, i) in Projects"
-                        :key="i"
-                        :project="item"
-                        @click="setProjectView(item)"
-                        style="flex-shrink: 0"
-                      />
-                    </v-container>
+                    <section id="project-selection">
+                      <v-container
+                        class="thin-scroll d-flex flex-row align-center ga-5"
+                        style="
+                          overflow-y: auto;
+                          overflow-x: auto;
+                          max-height: 500px;
+                          max-width: 100%;
+                          width: fit-content;
+                          border: 1px solid var(--color-primary);
+                          background-color: transparent;
+                          box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.15);
+                        "
+                      >
+                        <ProjectCard
+                          v-for="(item, i) in Projects"
+                          :key="i"
+                          :project="item"
+                          @click="setProjectView(item)"
+                          style="flex-shrink: 0"
+                        />
+                      </v-container>
+                    </section>
                   </v-container>
                 </v-container>
               </v-slide-x-transition>
