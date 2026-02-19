@@ -20,12 +20,6 @@
 
 <script setup>
 defineProps(["location", "text", "icon", "link", "aria", "size"]);
-import {computed} from 'vue';
-import { useDisplay } from "vuetify";
-const { mdAndUp } = useDisplay();
-const socialBtnSize = computed(()=>
-  mdAndUp.value ? 50 : 20
-)
 </script>
 
 <style scoped>
