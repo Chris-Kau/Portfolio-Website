@@ -56,7 +56,7 @@ const scrollTo = (id) => {
                 {{ project.name }}
               </v-card-text>
 
-              <div class="project-social-icons d-flex flex-row ga-2 pa-0" style="border: none">
+              <div class="project-social-icons d-flex flex-row ga-0 pa-0" style="border: none">
                 <ProjectTooltipBtn
                   v-for="(item, i) in project.links"
                   :key="i"

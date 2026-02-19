@@ -11,7 +11,7 @@ const sectionNameSize = computed(()=>
   mdAndUp.value ? '36px' : '24px'
 )
 const socialBtnSize = computed(()=>
-  mdAndUp.value ? 50 : 35
+  mdAndUp.value ? 50 : 10
 )
 </script>
 
