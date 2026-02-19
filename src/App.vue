@@ -430,7 +430,6 @@ section {
   height: calc(100vh - 60px);
   margin-top: 60px;
   overflow-y: auto;
-  overflow-x: hidden;
   scrollbar-width: thin;
   scrollbar-color: var(--color-supportingaccent) transparent;
 }
