@@ -3,7 +3,7 @@
     <template v-slot:activator="{ props }">
       <v-btn
         v-bind="props"
-        :size="`${mdAndUp ? 40 : 20}`"
+        size="50"
         class="project-social-icons"
         variant="text"
         :href="link"

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Navbar from "@/assets/Navbar.vue";
-import { ref, onMounted } from "vue";
+import { ref, onMounted, computed } from "vue";
 import { useDisplay } from "vuetify";
 import Projects from "@/assets/data/Projects.json";
 import ExperienceCard from "@/assets/ExperienceCard.vue";
@@ -43,6 +43,19 @@ onMounted(() => {
   setTimeout(() => (showProjects.value = true), 800);
   setTimeout(() => (showShells.value = true), 1000);
 });
+
+const sectionHeaderSize = computed(() =>
+  mdAndUp.value ? '48px' : '32px'
+);
+const sectionParagraphSize = computed(()=>
+  mdAndUp.value ? '16px' : '12px'
+)
+const sectionNameSize = computed(()=>
+  mdAndUp.value ? '36px' : '28px'
+)
+const socialBtnSize = computed(()=>
+  mdAndUp.value ? 50 : 35
+)
 </script>
 <template>
   <v-app class="pa-0 pb-0 mb-0">
@@ -78,7 +91,7 @@ onMounted(() => {
           </v-expand-transition>
         </v-col>
 
-        <v-col cols="12" md="8">
+        <v-col class="px-4 px-md-0" cols="12" md="8">
           <v-main style="padding-bottom: 0px; margin: 0 auto">
             <!-- 
           About me Section 
@@ -92,22 +105,22 @@ onMounted(() => {
                   <div class="sans flex-1" style="max-width: 500px">
                       <p
                         class="sans ml-1"
-                        style="
-                          color: var(--color-text);
-                          background-color: var(--color-accent);
-                          width: fit-content;
-                          font-size: 18px;
+                        :style="
+                          {color: 'var(--color-text)',
+                          backgroundColor: 'var(--color-accent)',
+                          width: 'fit-content',
+                          fontSize: sectionParagraphSize}
                         "
                       >
                         Software Engineer | Based in California
                       </p>
-                      <p class="mono" style="font-size: 36px">
+                      <p class="mono" :style="{fontSize: sectionNameSize}">
                         <span style="color: var(--color-secondary)">Hello, I'm </span>
                         <span style="color: var(--color-text)">Chris Kau</span>
                       </p>
                       <p
                         class="sans"
-                        style="color: var(--color-secondary); font-size: 18px"
+                        :style="{color: 'var(--color-secondary)', fontSize: sectionParagraphSize}"
                       >
                         I'm a student at
                         <a class="ahref" href="https://www.csulb.edu/" target="_blank"
@@ -129,7 +142,7 @@ onMounted(() => {
                         what keeps me going!
                       </p>
                     <v-container
-                      class="social-icons d-flex flex-row ga-md-7 ga-sm-3 ps-1"
+                      class="social-icons d-flex align-center flex-row ga-md-7 ga-sm-3 ps-1"
                     >
                       <v-tooltip
                         class="sans pa-0"
@@ -142,11 +155,12 @@ onMounted(() => {
                         <template v-slot:activator="{ props }">
                           <v-btn
                             v-bind="props"
-                            height="50"
-                            class="resume-btn text-white"
+                            :height="socialBtnSize"
+                            class="resume-btn text-white d-flex align-center justify-center text-center"
                             variant="tonal"
                             href="./PortfolioResume.pdf"
                             target="_blank"
+                            :style="{fontSize: sectionParagraphSize}"
                           >
                             View Resume
                             <v-icon size="20" class="ms-2 hn text-white">
@@ -161,14 +175,14 @@ onMounted(() => {
                         location="bottom"
                         link="https://github.com/Chris-Kau"
                         icon="hn-github"
-                        size="50"
+                        :size="socialBtnSize"
                       />
                       <TooltipBtn
                         text="LinkedIn"
                         location="bottom"
                         link="https://www.linkedin.com/in/chris-kau/"
                         icon="hn-linkedin"
-                        size="50"
+                        :size="socialBtnSize"
                       />
                       <span @click="copyEmail">
                         <TooltipBtn
@@ -178,7 +192,7 @@ onMounted(() => {
                           :icon="
                             !swapEmailIcon ? 'hn-envelope-solid' : 'hn-clipboard-solid'
                           "
-                          size="50"
+                          :size="socialBtnSize"
                         />
                       </span>
                     </v-container>
@@ -201,7 +215,7 @@ onMounted(() => {
                 <v-container v-if="showTechStack" class="pa-0 pb-5">
                 <span
                   class="mono d-flex align-center ga-3"
-                  style="color: var(--color-secondary); font-size: 48px"
+                  :style="{color: 'var(--color-secondary)', fontSize: sectionHeaderSize}"
                 >
                   <v-icon class="hn" size="25">hn-programming</v-icon>
                   Current Tech Stack
@@ -234,7 +248,7 @@ onMounted(() => {
                 >
                   <p
                     class="mono text-left"
-                    style="color: var(--color-secondary); font-size: 48px"
+                    :style="{color: 'var(--color-secondary)', fontSize: sectionHeaderSize}"
                   >
                     <span class="d-flex align-center ga-3">
                       <v-icon class="hn" size="25">hn-business</v-icon>
@@ -299,7 +313,7 @@ onMounted(() => {
                 >
                   <p
                     class="mono text-left"
-                    style="color: var(--color-secondary); font-size: 48px"
+                    :style="{color: 'var(--color-secondary)', fontSize: sectionHeaderSize}"
                   >
                     <span class="d-flex align-center ga-3">
                       <v-icon class="hn" size="25">hn-sparkles-solid</v-icon>

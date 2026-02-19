@@ -1,12 +1,24 @@
 <script setup>
 import ProjectTooltipBtn from './ProjectTooltipBtn.vue'
+import { useDisplay } from "vuetify";
+import {computed} from "vue";
+const { mdAndUp } = useDisplay();
 defineProps(['company', 'date', 'role', 'description', 'skills', 'link'])
+const sectionParagraphSize = computed(()=>
+  mdAndUp.value ? '16px' : '12px'
+)
+const sectionNameSize = computed(()=>
+  mdAndUp.value ? '36px' : '24px'
+)
+const socialBtnSize = computed(()=>
+  mdAndUp.value ? 50 : 35
+)
 </script>
 
 <template>
   <v-card
     class="vcardhover mx-auto"
-    width="415"
+    :width="mdAndUp ? 415 : 300"
     flat
     style="
       color: white;
@@ -18,7 +30,7 @@ defineProps(['company', 'date', 'role', 'description', 'skills', 'link'])
     <!-- Title + Subtitle -->
     <template #title>
       <div class="d-flex justify-space-between flex-row align-center pb-0">
-        <div class="mono text-h4">
+        <div class="mono " :style="{fontSize: sectionNameSize}" >
           {{ company }}
         </div>
         <div class="project-social-icons" style="color: white">
@@ -27,19 +39,20 @@ defineProps(['company', 'date', 'role', 'description', 'skills', 'link'])
             location="top"
             :link="link"
             icon="hn-external-link"
+            :size="socialBtnSize"
           />
         </div>
       </div>
     </template>
 
     <template #subtitle>
-      <span class="sans" style="font-size:16px">{{ role }} • {{ date }}</span>
+      <span class="sans" :style="{fontSize: sectionParagraphSize}">{{ role }} • {{ date }}</span>
     </template>
 
     <!-- Description -->
     <v-container
       class="sans pt-4"
-      style="color: var(--color-paragraph-text); background-color: transparent; font-size: 16px"
+      :style="{color: 'var(--color-paragraph-text)', backgroundColor: 'transparent', fontSize: sectionParagraphSize}"
     >
       {{ description }}
     </v-container>
@@ -55,7 +68,7 @@ defineProps(['company', 'date', 'role', 'description', 'skills', 'link'])
         color="ck-accent"
         variant="flat"
         label
-        style="font-size:16px"
+        :style="{fontSize:sectionParagraphSize}"
       >
         {{ skill }}
       </v-chip>
