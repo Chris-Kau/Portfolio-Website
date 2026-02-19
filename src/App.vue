@@ -95,7 +95,7 @@ const timelineDirection = computed(()=>
           </v-expand-transition>
         </v-col>
 
-        <v-col class="px-4 px-md-0" cols="12" md="8">
+        <v-col class="px-2 px-md-0" cols="12" md="8">
           <v-main style="padding-bottom: 0px; margin: 0 auto">
             <!-- 
           About me Section 
