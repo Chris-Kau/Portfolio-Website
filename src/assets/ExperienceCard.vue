@@ -18,8 +18,8 @@ const socialBtnSize = computed(()=>
 <template>
   <v-card
     class="vcardhover mx-auto d-flex flex-column"
-    :width="mdAndUp ? 415 : 300"
-    :height="mdAndUp ? 415 : 300"
+    :width="mdAndUp ? 415 : 275"
+    :height="mdAndUp ? 415 : 275"
     flat
     style="
       color: white;
