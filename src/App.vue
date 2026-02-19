@@ -56,6 +56,10 @@ const sectionNameSize = computed(()=>
 const socialBtnSize = computed(()=>
   mdAndUp.value ? 50 : 35
 )
+
+const timelineDirection = computed(()=>
+  mdAndUp.value ? "horizontal" : "vertical"
+)
 </script>
 <template>
   <v-app class="pa-0 pb-0 mb-0">
@@ -272,8 +276,8 @@ const socialBtnSize = computed(()=>
                     >
                       <v-timeline
                         align="start"
-                        side="start"
-                        direction="horizontal"
+                        :side="mdAndUp ? 'start' : 'end'"
+                        :direction="timelineDirection"
                         line-color="ck-supportingaccent"
                       >
                         <v-timeline-item
