@@ -83,7 +83,7 @@ const scrollTo = (id) => {
 
 
           <!-- Description -->
-          <div class="thin-scroll pt-1" style="flex: 1; min-height: 0; overflow-y: auto">
+          <div class="thin-scroll pt-2" style="flex: 1; min-height: 0; overflow-y: auto">
             <v-card-text class="sans pt-0 pb-1" style="font-size: 12px">
               {{ project.description }}
             </v-card-text>
