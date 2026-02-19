@@ -17,8 +17,9 @@ const socialBtnSize = computed(()=>
 
 <template>
   <v-card
-    class="vcardhover mx-auto"
+    class="vcardhover mx-auto d-flex flex-column"
     :width="mdAndUp ? 415 : 300"
+    :height="mdAndUp ? 415 : 300"
     flat
     style="
       color: white;
@@ -51,8 +52,8 @@ const socialBtnSize = computed(()=>
 
     <!-- Description -->
     <v-container
-      class="sans pt-4"
-      :style="{color: 'var(--color-paragraph-text)', backgroundColor: 'transparent', fontSize: sectionParagraphSize}"
+      class="sans pt-4 flex-grow-1"
+      :style="{color: 'var(--color-paragraph-text)', backgroundColor: 'transparent', fontSize: sectionParagraphSize, overflowY: 'auto'}"
     >
       {{ description }}
     </v-container>
@@ -60,7 +61,7 @@ const socialBtnSize = computed(()=>
     <v-divider style="color: var(--color-secondary)" />
 
     <!-- Skills -->
-    <v-container class="thin-scroll d-flex flex-row ga-2" style="background-color: transparent; overflow-x: auto">
+    <v-container class="thin-scroll d-flex flex-row ga-2 align-center" style="background-color: transparent; overflow-x: auto; flex: 0 0 auto; height: 50px; overflow-y: hidden">
       <v-chip
         v-for="skill in skills"
         :key="skill"
