@@ -48,7 +48,7 @@ const sectionHeaderSize = computed(() =>
   mdAndUp.value ? '48px' : '32px'
 );
 const sectionParagraphSize = computed(()=>
-  mdAndUp.value ? '16px' : '12px'
+  mdAndUp.value ? '18px' : '14px'
 )
 const sectionNameSize = computed(()=>
   mdAndUp.value ? '36px' : '28px'
