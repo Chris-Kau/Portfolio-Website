@@ -271,7 +271,6 @@ const timelineDirection = computed(()=>
                         width: 100%;
                         flex: 0 0 auto;
                         overflow-x: auto;
-                        overflow-y: hidden;
                       "
                     >
                       <v-timeline
